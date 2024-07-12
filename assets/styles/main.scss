@@ -1,21 +1,25 @@
 @use "sass:map";
 @use "sass:list";
 @forward "generic";
-@forward "fonts/e-ukraine.css";
-@forward "fonts/e-ukraineHead.css";
-@forward "fonts/misto.css";
+@forward "../fonts/e-ukraine/e-ukraine.css";
+@forward "../fonts/e-ukraineHead/e-ukraineHead.css";
+@forward "../fonts/damn/damn.css";
+
+
+
+
 
 /* Colors
 --------------------------------------------- */
 $primary-green: #02C700;
 $white: #fff;
-$orange: #FEA726;
+$orange: #fd7e14;
 $black: #1b1b1b;
 $gray: #8a8a8a;
 //$gray-light: #f0f0f0;
 $text-primary: #1c1c1c;
-//$pink: #df4065;
-//$blue: #49a3f8;
+$pink: #F982FB;
+$blue: #564cf8;
 //$yellow: #ffcc48;
 //$purple: #bd7fee;
 
@@ -97,6 +101,31 @@ body {
   font-family: 'e-Ukraine Head', sans-serif;
   font-size: 1.1rem;
   color: $black;
+  --sb-track-color: transparent;
+  --sb-thumb-color: $primary-green;
+  --sb-size: 8px;
+}
+
+
+body::-webkit-scrollbar {
+  width: var(--sb-size)
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--sb-track-color);
+  border-radius: 8px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: var(--sb-thumb-color);
+  border-radius: 8px;
+
+}
+
+@supports not selector(::-webkit-scrollbar) {
+  body {
+    scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
+  }
 }
 
 main {
@@ -107,7 +136,11 @@ main {
 .container {
   position: relative;
   width: 100%;
+}
 
+.container-fluid {
+  max-width: 95%;
+  margin: 0 auto;
 }
 
 .w-100 {
@@ -128,8 +161,8 @@ img {
   height: auto;
 }
 
-.title-secondary{
-  font-family: 'Misto', sans-serif;
+.title-secondary {
+  font-family: 'DAMN', sans-serif;
 }
 
 /* Keyframes
@@ -148,20 +181,25 @@ img {
 --------------------------------------------- */
 
 .button-primary {
+  --button-primary-bg: #{$primary-green};
+  --button-primary-hover-bg: #{$orange};
+  --button-primary-text: #{$white};
+  --button-primary-icon-bg: #{$orange};
+  --button-primary-icon-hover-bg: #{$primary-green};
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 10px 16px 10px 12px;
+  padding: 6px 16px 6px 8px;
   border-radius: 100px;
-  background-color: $primary-green;
-  color: $white;
-  border: none;
+  background-color: var(--button-primary-bg);
+  color: var(--button-primary-text);
   text-decoration: none;
   overflow: hidden;
   position: relative;
   text-transform: uppercase;
   transition: $primary-animation;
   font-size: 1rem;
+  border: 3px solid $white;
 
   &__text {
     z-index: 1;
@@ -176,7 +214,7 @@ img {
     margin-right: 10px;
     position: relative;
     transition: all 0.75s ease-in-out;
-    background: $orange url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='16' width='14' viewBox='0 0 448 512'%3E%3C!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--%3E%3Cpath fill='%23ffffff' d='M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z'/%3E%3C/svg%3E") center no-repeat;
+    background: var(--button-primary-icon-bg) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='16' width='14' viewBox='0 0 448 512'%3E%3C!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--%3E%3Cpath fill='%23ffffff' d='M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z'/%3E%3C/svg%3E") center no-repeat;
   }
 
   &:before {
@@ -184,7 +222,7 @@ img {
     width: 100%;
     height: 100%;
     border-radius: 100px;
-    background-color: $orange;
+    background-color: var(--button-primary-hover-bg);
     display: inline-block;
     position: absolute;
     top: 0;
@@ -196,12 +234,20 @@ img {
 
   &:hover {
     .button-primary__icon {
-      background: $primary-green url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='16' width='14' viewBox='0 0 448 512'%3E%3C!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--%3E%3Cpath fill='%23ffffff' d='M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z'/%3E%3C/svg%3E") center no-repeat;
+      background: var(--button-primary-icon-hover-bg) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='16' width='14' viewBox='0 0 448 512'%3E%3C!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--%3E%3Cpath fill='%23ffffff' d='M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z'/%3E%3C/svg%3E") center no-repeat;
     }
 
     &:before {
       transform: translateX(0);
     }
+  }
+
+  &.pink {
+    --button-primary-bg: #{$pink};
+    --button-primary-hover-bg: #{$primary-green};
+    --button-primary-text: #{$white};
+    --button-primary-icon-bg: #{$primary-green};
+    --button-primary-icon-hover-bg: #{$pink};
   }
 }
 
@@ -227,11 +273,11 @@ img {
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    column-gap: 12px;
+    column-gap: 20px;
     row-gap: 12px;
     margin-bottom: 36px;
 
-    .nav-link{
+    .nav-link {
       padding: 0;
       text-transform: uppercase;
       color: $text-primary;
@@ -276,52 +322,149 @@ img {
   }
 }
 
-@include breakpoint(lg){
-  .header-primary {
-    backdrop-filter: blur( 4px );
-    -webkit-backdrop-filter: blur( 4px );
+.hero {
+  background-color: $blue;
+  min-height: 100vh;
+  padding-top: 200px;
 
-    .navbar-nav{
+  &__eyes-animation {
+    position: fixed;
+    top: 20.6svw;
+    left: 66.1svw;
+    max-width: 150px;
+    transform: rotate(15deg);
+  }
+
+  &__baguette-stickers{
+    z-index: 11;
+    width: 60px;
+    top: 35.8svw;
+    left: 2.3svw;
+    position: fixed;
+    bottom: 0;
+    right: auto;
+  }
+
+  &__hand-sticker{
+    z-index: 11;
+    width: 50px;
+    bottom: 23.1svw;
+    right: 10.4svw;
+    position: fixed;
+    top: auto;
+    left: auto;
+  }
+
+  &__title{
+    color: $white;
+    font-size: 50px;
+  }
+}
+
+@include breakpoint(md){
+  .hero{
+    &__eyes-animation {
+      top: 15.2svw;
+      max-width: 170px;
+    }
+
+    &__baguette-stickers{
+      width: 80px;
+      top: 54.9svw;
+      left: 7.8svw;
+    }
+
+    &__hand-sticker{
+      width: 60px;
+      right: 13.4svw;
+    }
+  }
+}
+
+@include breakpoint(lg) {
+  .header-primary {
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+
+    .navbar-nav {
       align-items: center;
       row-gap: 0;
       margin-bottom: 0;
 
-      .nav-link{
+      .nav-link {
         font-size: 0.875rem;
+        color: $white;
       }
     }
 
-    .button-primary{
+    .button-primary {
       font-size: 0.75rem;
 
-      &__icon{
+      &__icon {
         width: 1.5rem;
         height: 1.5rem;
       }
     }
   }
-}
 
-@include breakpoint(xl) {
-  .header-primary {
-    &__logo {
-      max-width: 200px;
+  .hero {
+    &__baguette-stickers {
+      width: 100px;
+      top: 48svw;
+      left: 12.1svw;
+    }
+    &__hand-sticker{
+      width: 70px;
+      bottom: 19.9svw;
     }
 
-    .navbar-nav{
-      column-gap: 36px;
+    &__title{
+      font-size: 10.5svw;
+    }
+  }
 
-      .nav-link{
+  @include breakpoint(xl) {
+    .header-primary {
+      &__logo {
+        max-width: 200px;
+      }
+
+      .navbar-nav {
+        column-gap: 36px;
+
+        .nav-link {
+          font-size: 1rem;
+        }
+      }
+
+      .button-primary {
         font-size: 1rem;
+
+        &__icon {
+          width: 2rem;
+          height: 2rem;
+        }
       }
     }
 
-    .button-primary{
-      font-size: 1rem;
+    .hero{
+      &__baguette-stickers {
+        z-index: 1;
+        width: 165px;
+        top: 20.5svw;
+        left: 13.8svw;
+      }
 
-      &__icon{
-        width: 2rem;
-        height: 2rem;
+      &__hand-sticker{
+        z-index: 1;
+        width: 90px;
+        top: auto;
+        bottom: 9.7svw;
+        right: 16.3svw;
+      }
+
+      &__title{
+        font-size: 5svw;
       }
     }
   }

@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'DAMN';
+    src: url('./DAMN-Regular.woff2') format('woff2'),
+        url('./DAMN-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
