@@ -14,77 +14,401 @@
     <link rel="icon" href="./assets/images/favicon.ico" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-            crossorigin="anonymous"></script>
+    <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
     <link rel="stylesheet" href="assets/styles/main.css">
 </head>
 <body>
-
-<nav class="navbar navbar-expand-lg header-primary fixed-top">
-    <a href="https://tgi.academy/" target="_blank" class="header-primary__logo d-lg-none">
-        <img src="assets/images/logo-white-green.svg" alt="logo">
+<header class="header-main">
+    <a href="/">
+        <img src="./assets/images/logo.png" alt="logo" class="header-main__logo">
     </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
-            aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-        <div class="offcanvas-header">
-            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-        </div>
-        <div class="offcanvas-body justify-content-lg-center">
-            <div class="navbar-nav">
-                <a class="nav-link" href="#">про нас</a>
-                <a class="nav-link" href="#">проекти</a>
-                <a class="nav-link" href="#">ціни на навчання</a>
-                <a href="https://tgi.academy/" target="_blank" class="header-primary__logo d-none d-lg-flex">
-                    <img src="assets/images/logo-white-green.svg" alt="logo">
-                </a>
-                <a class="nav-link" href="#">івенти</a>
-                <a class="nav-link" href="#">faq</a>
-                <a class="nav-link" href="#">контакти</a>
-            </div>
-            <a href="/" class="button-primary pink d-inline-flex d-lg-none">
+    <nav class="header-main__nav">
+        <a href="#" class="header-main__nav-item">Про нас</a>
+        <a href="#" class="header-main__nav-item">Проекти</a>
+        <a href="#" class="header-main__nav-item">навчальні програми</a>
+        <a href="#" class="header-main__nav-item">вартість навчання</a>
+        <a href="#" class="header-main__nav-item">Менторство</a>
+        <a href="#" class="header-main__nav-item">команда професіоналів</a>
+        <a href="#" class="header-main__nav-item">Гурктки</a>
+        <a href="#" class="header-main__nav-item">вакансії</a>
+        <a href="#" class="header-main__nav-item">наші школи</a>
+        <a href="#" class="header-main__nav-item">галерея</a>
+        <a href="https://drive.google.com/drive/folders/15WvncggUFTtRcPvKx0xXSTb_zdXUoYwB" class="header-main__nav-item"
+           target="_blank">Ліцензія</a>
+    </nav>
+</header>
+<section class="home-hero container">
+    <div class="row">
+        <div class="col-12 col-lg-6 col-xl-5 col-hd-4">
+            <h1 class="home-hero__title">TGI Academy</h1>
+            <p class="text-md">Комплекс приватних шкіл, що забезпечують сучасні умови для всебічного розвитку дітей від
+                Preschool до випуску.</p>
+            <p class="text-md">Ми віримо, що якщо немає двох однакових дітей на землі, то й навчати їх треба
+                персоналізовано.</p>
+            <a href="/" class="button-primary green">
                 <span class="button-primary__icon"></span>
-                <span class="button-primary__text">познайомимось</span>
+                <span class="button-primary__text">Записатися</span>
+            </a>
+        </div>
+
+        <div class="col-12 col-lg-6 col-xl-5 col-hd-7 offset-xl-1 position-relative">
+            <div class="hero-slider">
+                <div class="hero-slider-top swiper">
+                    <div class="swiper-wrapper">
+                        <div class="hero-slider__item swiper-slide swiper-slide">
+                            <img src="https://placehold.co/600x400" alt="test">
+                        </div>
+                        <div class="hero-slider__item swiper-slide">
+                            <img src="https://placehold.co/600x400" alt="test">
+                        </div>
+                        <div class="hero-slider__item swiper-slide">
+                            <img src="https://placehold.co/600x400" alt="test">
+                        </div>
+                        <div class="hero-slider__item swiper-slide">
+                            <img src="https://placehold.co/600x400" alt="test">
+                        </div>
+                        <div class="hero-slider__item swiper-slide">
+                            <img src="https://placehold.co/600x400" alt="test">
+                        </div>
+                        <div class="hero-slider__item swiper-slide">
+                            <img src="https://placehold.co/600x400" alt="test">
+                        </div>
+                        <div class="hero-slider__item swiper-slide">
+                            <img src="https://placehold.co/600x400" alt="test">
+                        </div>
+                        <div class="hero-slider__item swiper-slide">
+                            <img src="https://placehold.co/600x400" alt="test">
+                        </div>
+                        <div class="hero-slider__item swiper-slide">
+                            <img src="https://placehold.co/600x400" alt="test">
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-slider-bottom swiper">
+                    <div class="swiper-wrapper">
+                        <div class="hero-slider__item swiper-slide swiper-slide">
+                            <img
+                                    src="assets/images/hero-slider/top/IMG_9567.jpg" height="2400" width="1600"
+                                    alt="hero school"/>
+                        </div>
+                        <div class="hero-slider__item swiper-slide">
+                            <img src="https://placehold.co/600x400" alt="test">
+                        </div>
+                        <div class="hero-slider__item swiper-slide">
+                            <img src="https://placehold.co/400x600" alt="test">
+                        </div>
+                        <div class="hero-slider__item swiper-slide">
+                            <img src="https://placehold.co/600x400" alt="test">
+                        </div>
+                        <div class="hero-slider__item swiper-slide">
+                            <img src="https://placehold.co/600x400" alt="test">
+                        </div>
+                        <div class="hero-slider__item swiper-slide">
+                            <img src="https://placehold.co/600x400" alt="test">
+                        </div>
+                        <div class="hero-slider__item swiper-slide">
+                            <img src="https://placehold.co/600x400" alt="test">
+                        </div>
+                        <div class="hero-slider__item swiper-slide">
+                            <img src="https://placehold.co/600x400" alt="test">
+                        </div>
+                        <div class="hero-slider__item swiper-slide">
+                            <img src="https://placehold.co/600x400" alt="test">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="features container">
+    <div class="wrapper grid">
+        <div class="features__item">
+            <p class="counter">
+                <span class="counter__number">5</span>
+                <span class="counter__text"> років</span>
+            </p>
+            <p class="features__item__text">
+                як навчаємо і <br> підтримуємо
+            </p>
+        </div>
+        <div class="features__item">
+            <p class="counter">
+                <span class="counter__number">150</span>
+                <span class="counter__text"> +</span>
+            </p>
+            <p class="features__item__text">
+                реалізованих проектів <br>протягом року
+            </p>
+        </div>
+        <div class="features__item">
+            <p class="counter">
+                <span class="counter__number">10</span>
+                <span class="counter__text"> +</span>
+            </p>
+            <p class="features__item__text">
+                гуртків
+            </p>
+        </div>
+        <div class="features__item">
+            <p class="counter">
+                <span class="counter__number">2</span>
+                <span class="counter__text"> школи</span>
+            </p>
+            <p class="features__item__text">
+                в Ірпені
+            </p>
+        </div>
+        <div class="features__item">
+            <h3 class="h3">
+                Наша місія
+            </h3>
+            <p class="text-base">
+                Ми прагнемо створити сучасне і захоплююче освітнє середовище, яке допоможе дітям і дорослим краще
+                пізнати себе.
+            </p>
+            <p class="text-base">
+                Наша мета — підтримати розвиток індивідуальних здібностей та навчити співпраці, щоб кожен міг вносити
+                свій внесок у спільне благо.
+            </p>
+            <p class="text-base">
+                Разом ми будемо працювати над покращенням життя в Україні та в усьому світі!
+            </p>
+            <div class="plus-icon"></div>
+        </div>
+        <div class="features__item">
+            <h3 class="h3">
+                Чому ми?
+            </h3>
+            <ul class="features__item__list">
+                <li class="text-base">персональні плани розвитку кожного учня (академічний блок та особистісний)</li>
+                <li class="text-base">система наставництва, де кожна дитина має свого ментора, який веде її до
+                    індивідуальних цілей
+                </li>
+                <li class="text-base">проєкти (результативні, дослідницькі, менторські)</li>
+                <li class="text-base">невеликі класи до 15 дітей</li>
+                <li class="text-base">більше 10 гуртків, які доповнюють навчальний день</li>
+                <li class="text-base">безперебійна робота (навчаємося під час тривог та блекаутів)</li>
+                <li class="text-base">міжнародні поїздки</li>
+                <li class="text-base">співпраця із кращими університетами України</li>
+            </ul>
+            <div class="plus-icon"></div>
+        </div>
+        <div class="features__item">
+            <h3 class="h3 text-white ">
+                Візія школи
+            </h3>
+            <p class="text-white text-base">
+                Розкриття потенціалу та здібностей дитини через формування унікального досвіду: створення середовища, де
+                спільнота забезпечує можливості для якісних локальних та глобальних змін, доступних "на відстані
+                витягнутої руки" кожного учасника.
+            </p>
+            <p class="text-white text-base">
+                Занурення у різні середовища поза школою сприяє глибшому пізнанню світу. Розвиток здатності реагувати та
+                діяти найкращим чином у умовах невизначеності.
+            </p>
+            <div class="plus-icon"></div>
+        </div>
+        <div class="features__item d-flex flex-column justify-content-center align-items-center">
+            <h3 class="h3 text-white text-center">
+                Відкрийте двері до нових можливостей!
+            </h3>
+            <p class="text-white text-base text-center">
+                Запишіться на пробний день у нашій школі і дізнайтеся, чому ми – найкращий вибір для освіти вашої
+                дитини!
+            </p>
+            <a href="/" class="button-primary green">
+                <span class="button-primary__icon"></span>
+                <span class="button-primary__text">Записатися</span>
             </a>
         </div>
     </div>
-    <a href="/" class="button-primary pink d-none d-lg-flex">
-        <span class="button-primary__icon"></span>
-        <span class="button-primary__text">познайомимось</span>
-    </a>
-</nav>
-
-<main>
-    <section class="hero">
-        <div class="container-fluid">
-            <div class="hero__eyes-animation">
-                <dotlottie-player src="https://lottie.host/431a4f69-d2bd-4e81-a50f-18a39522b374/cG88hruGTI.json"
-                                  background="transparent" speed="1" style="width: 120px; height: 120px" direction="1"
-                                  playMode="normal" loop autoplay></dotlottie-player>
-            </div>
-            <div class="hero__baguette-stickers">
-                <img src="./assets/images/baguette-stickers.svg" alt="baguette-stickers">
-            </div>
-            <div class="hero__hand-sticker">
-                <img src="./assets/images/hand-sticker.svg" alt="hand sticker">
-            </div>
-            <h1 class="hero__title title-secondary text-center">
-                world <br> changers <br> school
-            </h1>
+</section>
+<section class="text-banner container">
+    <h2 class="text-banner__text">
+        <span class="d-block">TGI Academy – це більше ніж школа.</span>
+        <span>Це місце, де кожен учень може розкрити свої таланти, досягти вершин і підготуватися до успішного майбутнього.</span>
+    </h2>
+</section>
+<section class="blocks-grid container d-flex flex-column justify-content-center">
+    <div class="wrapper">
+        <div class="blocks-grid__item"></div>
+        <div class="blocks-grid__item">
+            <h2 class="blocks-grid__item-title">Шкільні<br> проєкти</h2>
+            <div class="plus-icon"></div>
         </div>
-    </section>
-</main>
+        <div class="blocks-grid__item">
+            <h2 class="blocks-grid__item-title">Система<br> менторства</h2>
+            <div class="plus-icon"></div>
+        </div>
+        <div class="blocks-grid__item"></div>
+        <div class="blocks-grid__item" id="main-image"></div>
+        <div class="blocks-grid__item">
+            <h2 class="blocks-grid__item-title">Різноманітні<br> гуртки</h2>
+            <div class="plus-icon"></div>
+        </div>
+        <div class="blocks-grid__item"></div>
+        <div class="blocks-grid__item">
+            <h2 class="blocks-grid__item-title">Програми<br> навчання</h2>
+            <div class="plus-icon"></div>
+        </div>
+        <div class="blocks-grid__item"></div>
+    </div>
+    <a href="/" class="button-primary green align-self-center">
+        <span class="button-primary__icon"></span>
+        <span class="button-primary__text">Записатися</span>
+    </a>
+</section>
 
+<section class="price container">
+    <h2 class="h2 text-white text-center">Вартість навчання</h2>
+    <div class="price-boxes swiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide price__item">
+                <p class="price__item__subtitle h4">
+                    Pre-school
+                </p>
+                <p class="price__item__title">
+                    16 000
+                    <span>/місяць</span>
+                </p>
+                <p class="price__item__text">
+                    15 000 <span>одноразовий вступний внесок</span>
+                </p>
+                <ul class="price__item__list list-unstyled">
+                    <li>
+                        Осінні та весняні табори
+                    </li>
+                    <li>
+                        Перші спрощені проєкти
+                    </li>
+                </ul>
+            </div>
+            <div class="swiper-slide price__item">
+                <p class="price__item__subtitle h4">
+                    1-4 класи
+                </p>
+                <p class="price__item__title">
+                    19 000
+                    <span>/місяць</span>
+                </p>
+                <p class="price__item__text">
+                    19 500 <span>одноразовий вступний внесок</span>
+                </p>
+                <ul class="price__item__list list-unstyled">
+                    <li>
+                        Осінні та весняні табори
+                    </li>
+                    <li>
+                        Зустрічі з експертами (письменники, театрали, представники професій)
+                    </li>
+                </ul>
+            </div>
+            <div class="swiper-slide price__item">
+                <p class="price__item__subtitle h4">
+                    5-10 класи
+                </p>
+                <p class="price__item__title">
+                    23 000
+                    <span>/місяць</span>
+                </p>
+                <p class="price__item__text">
+                    19 500 <span>одноразовий вступний внесок</span>
+                </p>
+                <ul class="price__item__list list-unstyled">
+                    <li>
+                        Додаткові навчальні курси
+                    </li>
+                    <li>
+                        Профорієнтація (із 8 класу)
+                    </li>
+                    <li>
+                        Супровід по програмах вступу (із 10 класу)
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+    <div class="wrapper">
+        <p class="text-sm">
+            Варіанти онлайн супроводу дізнавайтеся за тел. <a href="tel:093-388-70-92">093-388-70-92</a>
+        </p>
+        <div class="price__item price__item__featured d-flex flex-column flex-md-row align-items-md-center">
+            <div>
+                <svg width="84" height="97" viewBox="0 0 84 97" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M39.3514 82.2492C39.3514 89.8726 46.9525 96.738 54.4867 94.405C59.1751 92.9561 62.5632 88.602 62.6004 83.4678C73.4261 84.5154 81.1981 73.3256 76.4874 63.5698C84.6903 56.4443 83.5535 43.449 74.3103 37.8169C89.6388 29.0345 75.1574 5.39162 60.3268 16.2099C62.749 8.69804 56.5968 1.13416 48.6391 2.11494C44.0324 2.67963 40.191 6.27583 39.3514 10.8454V82.2418V82.2492Z"
+                          stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M60.3342 16.2173C60.3342 16.2173 57.6445 22.4363 51.1133 21.9533" stroke="white"
+                          stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M74.3178 37.8243C74.3178 37.8243 65.9588 40.3134 61.4339 34.6665" stroke="white"
+                          stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M76.4948 63.5699C76.4948 63.5699 68.1136 64.6696 64.7254 59.4685" stroke="white"
+                          stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M62.6004 83.4678C62.6004 83.4678 54.1746 81.7812 54.4941 74.0315" stroke="white"
+                          stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M33.5782 66.9059H20.137V66.8168C20.137 62.8713 18.4727 59.1489 15.7086 56.3402C10.7973 51.3546 7.95897 44.3182 8.59053 36.6354C9.60103 24.4128 19.5649 14.5902 31.8024 13.7432H33.5856"
+                          stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M19.981 70.4131V74.8786C19.981 81.0679 24.9963 86.0833 31.1856 86.0833H34.2246"
+                          stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M27.2625 86.3137V88.5354C27.2625 92.0276 30.0934 94.8511 33.5782 94.8511" stroke="white"
+                          stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M33.5782 7.80647V2.0481" stroke="white" stroke-width="3" stroke-linecap="round"
+                          stroke-linejoin="round"/>
+                    <path d="M22.9828 9.90186L21.0212 4.49268" stroke="white" stroke-width="3" stroke-linecap="round"
+                          stroke-linejoin="round"/>
+                    <path d="M13.7471 15.4894L10.0543 11.0833" stroke="white" stroke-width="3" stroke-linecap="round"
+                          stroke-linejoin="round"/>
+                    <path d="M6.98566 23.9077L2 21.0322" stroke="white" stroke-width="3" stroke-linecap="round"
+                          stroke-linejoin="round"/>
+                    <path d="M33.5782 94.851C33.5782 94.851 37.4196 95.1853 39.3514 93.0454" stroke="white"
+                          stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M13.0338 36.9996C12.536 43.0254 14.6684 48.9325 18.8813 53.2122C21.4819 55.8499 23.2577 59.0374 24.075 62.4479H29.5585V18.5356C20.7017 20.2966 13.7842 27.8308 13.0338 36.9996Z"
+                          fill="#FEA726"/>
+                </svg>
+                <h4 class="h4 mt-4">
+                    Стипендійна програма
+                </h4>
+            </div>
+            <div class="flex-grow-1 d-lg-flex gap-lg-4 justify-content-between">
+                <div>
+                    <p class="text-md mb-3">
+                        Для талановитих дітей для <span class="text-orange">5-10 класів</span>  діє стипендійна програма, де можна отримати знижку на навчання
+                        до <span class="text-orange">40%</span>.
+                    </p>
+                    <p class="text-md mb-5 mb-lg-0">
+                        Більше подробиць
+                        <a href="https://docs.google.com/document/d/1fYBkfEg7hhVuSxbcO9Yfx-lq5kUjTZ_KZXWBeeFr1To/edit"
+                           target="_blank">
+                            посиланням</a>.
+                    </p>
+                </div>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSf1TreJNiwFxE1N_sRda-Odtvu6QUwNKlFoihynjOu2oiQFRA/viewform"
+                   target="_blank"
+                   class="button-primary white-outline flex-shrink-0 align-self-center">
+                    <span class="button-primary__icon"></span>
+                    <span class="button-primary__text">Подати заявку</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+</section>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
         crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
         integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
         crossorigin="anonymous"></script>
-<script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
-        type="module"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script src="assets/scripts/swiper.js"></script>
+<script src="assets/scripts/scroll-animation.js"></script>
+<script src="assets/scripts/counter.js"></script>
+<script src="assets/scripts/js.js"></script>
 </body>
 </html>

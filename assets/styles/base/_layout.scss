@@ -1,0 +1,35 @@
+@use '../abstracts/colours' as *;
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.container{
+  padding: toRem(60) toRem(20);
+  max-width: 100%;
+
+  @include breakpoint(lg){
+    padding: toRem(100) 2%;
+  }
+}
+
+.grid{
+  display: grid;
+}
+
+/* Layout
+--------------------------------------------- */
+
+@include breakpoint(hd){
+  @for $i from 1 through 12 {
+    .col-hd-#{$i} {
+      width: calc(100% / #{$i});
+    }
+  }
+}
+
+@include breakpoint(4k){
+  @for $i from 1 through 12 {
+    .col-4k-#{$i} {
+      width: calc(100% / #{$i});
+    }
+  }
+}

@@ -1,0 +1,17 @@
+/* Media Query breakpoints
+--------------------------------------------- */
+
+$grid-breakpoints: (
+        md: 768px,
+        lg: 992px,
+        xl: 1366px,
+        xxl: 1600px,
+        hd: 1920px,
+        4k: 2560px
+);
+
+/* Variables
+--------------------------------------------- */
+
+$primary-animation: all 0.3s ease;
+

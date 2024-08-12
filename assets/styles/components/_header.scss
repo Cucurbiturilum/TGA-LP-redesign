@@ -1,0 +1,65 @@
+@use '../abstracts/colours' as *;
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.header-main{
+  padding: toRem(20);
+
+  &__logo{
+    max-width: toRem(300);
+    width: 100%;
+    margin-bottom: toRem(20);
+  }
+
+  &__nav{
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: toRem(10);
+    row-gap: toRem(10);
+
+    &-item{
+      text-transform: uppercase;
+      color: $white;
+      font-size: toRem(14);
+      text-decoration: none;
+      transition: $primary-animation;
+      text-align: center;
+      line-height: 1;
+      font-weight: 300;
+      padding: toRem(6) toRem(16);
+      border-radius: 100px;
+      background-color: $dark-primary;
+
+      &:hover{
+        background-color: $green-primary;
+      }
+    }
+  }
+
+  @include breakpoint(lg){
+    &__logo{
+      margin-bottom: toRem(36);
+    }
+
+    &__nav{
+      column-gap: toRem(16);
+      row-gap: toRem(16);
+      &-item{
+        font-size: toRem(18);
+        padding: toRem(8) toRem(22);
+      }
+    }
+  }
+
+  @include breakpoint(xl){
+    padding: toRem(20) 2%;
+  }
+
+  @include breakpoint(4k){
+    &__nav{
+      &-item{
+        font-size: toRem(24);
+      }
+    }
+  }
+}

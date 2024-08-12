@@ -1,0 +1,75 @@
+@use '../abstracts/colours' as *;
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.button-primary {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 20px 10px 14px;
+  box-shadow: inset 0 0 0 2px var(--border-color);
+  background-color: var(--background-color);
+  border-radius: 100px;
+  color: $white;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+  position: relative;
+  font-weight: 400;
+  transition: $primary-animation;
+
+  &.green{
+    --border-color: transparent;
+    --background-color: #{$green-primary};
+  }
+
+  &.white-outline{
+    --border-color: #{$white};
+    --background-color: transparent;
+  }
+
+  &__text {
+    z-index: 1;
+  }
+
+  &__icon {
+    width: 2rem;
+    height: 2rem;
+    flex-shrink: 0;
+    display: block;
+    border-radius: 50%;
+    margin-right: 10px;
+    position: relative;
+    transition: all 0.75s ease-in-out;
+    background: $orange url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='16' width='14' viewBox='0 0 448 512'%3E%3C!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--%3E%3Cpath fill='%23ffffff' d='M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z'/%3E%3C/svg%3E") center no-repeat;
+  }
+
+  &:before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    border-radius: 100px;
+    background-color: $orange;
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateX(-100%);
+    transition: all 0.75s ease-in-out;
+    will-change: transform;
+  }
+
+  &:hover {
+    .button-primary__icon {
+      background: $green-primary url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='16' width='14' viewBox='0 0 448 512'%3E%3C!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--%3E%3Cpath fill='%23ffffff' d='M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z'/%3E%3C/svg%3E") center no-repeat;
+    }
+
+    &.green, &.white-outline{
+      --border-color: transparent;
+    }
+
+    &:before {
+      transform: translateX(0);
+    }
+  }
+}

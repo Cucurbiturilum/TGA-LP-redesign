@@ -1,0 +1,43 @@
+@use "./variables" as *;
+@use "sass:map";
+
+/* Media Queries */
+@mixin breakpoint($key) {
+  $size: map.get($grid-breakpoints, $key);
+
+  @media only screen and (min-width: $size) {
+    @content;
+  }
+}
+
+@mixin breakpointMax($key) {
+  $size: map.get($grid-breakpoints, $key);
+
+  @media only screen and (max-width: ($size - 1)) {
+    @content;
+  }
+}
+
+/* Pixels to rem */
+
+@function toRem($value) {
+  $remValue: ($value / 16) + rem;
+  @return $remValue;
+}
+
+
+/* UI */
+
+@mixin plus-icon{
+  width: 48px;
+  height: 48px;
+  position: absolute;
+  background: url("data:image/svg+xml,%3Csvg width='48' height='49' viewBox='0 0 48 49' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M24 6.22449C24.8284 6.22449 25.5 6.89606 25.5 7.72449V22.7245H40.5C41.3284 22.7245 42 23.3961 42 24.2245C42 25.0529 41.3284 25.7245 40.5 25.7245H25.5V40.7245C25.5 41.5529 24.8284 42.2245 24 42.2245C23.1716 42.2245 22.5 41.5529 22.5 40.7245V25.7245H7.5C6.67157 25.7245 6 25.0529 6 24.2245C6 23.3961 6.67157 22.7245 7.5 22.7245H22.5V7.72449C22.5 6.89606 23.1716 6.22449 24 6.22449Z' fill='black'/%3E%3C/svg%3E%0A") center no-repeat;
+  background-size: contain;
+  transition: $primary-animation;
+  cursor: pointer;
+
+  &:hover {
+    transform: rotate(90deg);
+  }
+}

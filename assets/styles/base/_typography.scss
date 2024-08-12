@@ -1,0 +1,55 @@
+@use '../abstracts/colours' as *;
+
+body{
+  font-family: "e-Ukraine", sans-serif;
+  color: $dark-primary;
+}
+
+.text-white {
+  color: $white;
+}
+
+.text-orange{
+  color: $orange;
+}
+
+/* Title
+--------------------------------------------- */
+
+.h1{
+  font-size: clamp(2.25rem, 1.9466rem + 1.5171vw, 3.75rem); /* 60/36 */
+  font-weight: 600;
+}
+
+.h2{
+  font-size: clamp(2rem, 1.7977rem + 1.0114vw, 3rem); /* 48/32 */
+  font-weight: 600;
+}
+
+.h3{
+  font-size: clamp(1.75rem, 1.6489rem + 0.5057vw, 2.25rem); /* 36/28 */
+  font-weight: 500;
+}
+
+.h4{
+  font-size: clamp(1.25rem, 1.1994rem + 0.2528vw, 1.5rem); /* 24/20 */
+  font-weight: 600;
+}
+
+/* Text
+--------------------------------------------- */
+
+.text-base{
+  font-size: clamp(1rem, 0.9545rem + 0.2273vw, 1.125rem); /* 18/16 */
+  font-weight: 300;
+}
+
+.text-sm{
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.text-md{
+  font-size: clamp(1.125rem, 0.9886rem + 0.6818vw, 1.5rem); /* 24/18*/
+  font-weight: 300;
+}
