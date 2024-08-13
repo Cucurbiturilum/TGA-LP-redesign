@@ -38,4 +38,31 @@ document.addEventListener("DOMContentLoaded", function (event) {
     }, '<');
 
     /* Grid Block */
+
+
+    /* Testimonials */
+
+    let sections = gsap.utils.toArray(".testimonials__item");
+    const stopPanel = sections.findIndex((section) => section.dataset.pin);
+
+    const tl = gsap.timeline({
+        defaults: {
+            ease: "none"
+        },
+        scrollTrigger: {
+            trigger: ".testimonials",
+            pin: true,
+            scrub: 0.5,
+            end: "+=4000",
+        }
+    })
+        .to(sections, {
+            xPercent: -(100 * stopPanel),
+            duration: stopPanel,
+        })
+        .to(sections, {
+            xPercent: -(100 * (sections.length - 1)),
+            duration: sections.length - stopPanel,
+        });
+
 });

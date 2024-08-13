@@ -352,7 +352,6 @@ $grid-area-values__mobile: (
     border-radius: toRem(10);
     border: 2px solid transparent;
     padding: toRem(30) toRem(16);
-    cursor: pointer;
     height: auto;
     color: $white;
     transition: $primary-animation;
@@ -418,18 +417,18 @@ $grid-area-values__mobile: (
     }
   }
 
-  &__item__featured{
+  &__item__featured {
     column-gap: toRem(24);
     row-gap: toRem(24);
 
-    .h4{
+    .h4 {
       color: $orange;
       margin-bottom: 0;
       font-weight: 400;
       max-width: toRem(220);
     }
 
-    .text-md{
+    .text-md {
       color: $white-75;
       max-width: toRem(692);
     }
@@ -437,32 +436,141 @@ $grid-area-values__mobile: (
 
   .swiper-pagination {
     bottom: 0;
+
     &-bullet {
       width: toRem(10);
       height: toRem(10);
       background-color: $white;
     }
 
-    &-bullet-active{
+    &-bullet-active {
       background-color: $orange;
     }
   }
 
-  .wrapper{
+  .wrapper {
     max-width: 1400px;
     margin: toRem(36) auto 0;
 
-    a:not(.button-primary){
+    a:not(.button-primary) {
       transition: $primary-animation;
-      &:hover{
+
+      &:hover {
         color: $orange;
       }
     }
   }
 
-  .text-sm{
+  .text-sm {
     color: $white-75;
     margin-bottom: toRem(36);
+  }
+
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    gap: 8px;
+
+    .card__item {
+      border-radius: toRem(10);
+      padding: toRem(10);
+      background-color: $white-08;
+      transition: $primary-animation;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      .text-sm {
+        margin-bottom: 0;
+        margin-top: toRem(20);
+      }
+    }
+  }
+}
+
+.testimonials {
+  background-color: $black;
+  padding-right: 0 !important;
+
+  .h2 {
+    margin-bottom: toRem(50);
+  }
+
+  &__item {
+    &-text {
+      font-weight: 400;
+
+      &:before {
+        content: '';
+        width: toRem(48);
+        height: toRem(48);
+        background: url("data:image/svg+xml,%3Csvg width='48' height='48' viewBox='0 0 48 48' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_153_421)'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M11.48 23.5201C10.2462 23.6635 9.03612 23.9661 7.87996 24.4201C7.07086 24.7268 6.31498 25.1587 5.63996 25.7001C4.81186 26.322 4.18009 27.169 3.81996 28.1401C3.81996 28.8401 3.93996 29.5201 5.09996 29.7401C5.20114 29.7636 5.306 29.7666 5.40838 29.7491C5.51076 29.7315 5.60861 29.6937 5.69617 29.6378C5.78373 29.5819 5.85924 29.5091 5.91828 29.4236C5.97731 29.3381 6.01869 29.2417 6.03996 29.1401C6.15996 28.6601 5.37996 28.0601 6.71996 27.1401C7.41887 26.6243 8.20466 26.2382 9.03996 26.0001C9.909 25.7581 10.8001 25.604 11.7 25.5401C13.1033 25.4431 14.497 25.8341 15.6451 26.6469C16.7932 27.4597 17.6251 28.6442 18 30.0001C18.4621 31.2617 18.4603 32.6466 17.995 33.9071C17.5296 35.1676 16.6311 36.2214 15.46 36.8801C14.2545 37.4276 12.9222 37.635 11.6073 37.4799C10.2924 37.3248 9.04498 36.813 7.99996 36.0001C6.78373 35.3237 5.71718 34.4079 4.8647 33.3079C4.01221 32.2079 3.39148 30.9466 3.03996 29.6001C2.42198 25.4299 3.05538 21.1701 4.85996 17.3601C6.58719 13.4516 9.22793 10.0153 12.56 7.34007C12.6717 7.27435 12.7684 7.18575 12.8435 7.08008C12.9187 6.9744 12.9706 6.85404 12.996 6.72687C13.0213 6.59971 13.0195 6.46862 12.9907 6.34221C12.9618 6.21579 12.9065 6.09691 12.8285 5.99334C12.7505 5.88978 12.6515 5.80388 12.5379 5.74128C12.4243 5.67868 12.2988 5.64078 12.1696 5.63009C12.0404 5.61939 11.9104 5.63613 11.7881 5.67921C11.6658 5.72229 11.554 5.79074 11.46 5.88007C7.74891 8.65557 4.7528 12.2756 2.71996 16.4401C0.546754 20.6512 -0.33674 25.4095 0.179962 30.1201C0.564705 31.8983 1.31674 33.5765 2.38785 35.0471C3.45897 36.5177 4.82553 37.7483 6.39996 38.6601C7.93758 39.7553 9.75138 40.3977 11.6356 40.5144C13.5198 40.631 15.399 40.2173 17.06 39.3201C18.7541 38.2884 20.0262 36.6881 20.6491 34.8049C21.2719 32.9217 21.2049 30.8784 20.46 29.0401C19.8275 27.2267 18.5887 25.6872 16.9526 24.6815C15.3165 23.6758 13.3835 23.2656 11.48 23.5201Z' fill='%23121212'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M45.66 26C44.8407 25.077 43.7919 24.387 42.62 24C41.01 23.4914 39.328 23.2482 37.64 23.28C36.4693 23.2135 35.3006 23.4403 34.24 23.94C33.2246 24.4238 32.3296 25.1275 31.62 26C31.4734 26.1496 31.3913 26.3506 31.3913 26.56C31.3913 26.7694 31.4734 26.9705 31.62 27.12C31.6927 27.195 31.7797 27.2546 31.8759 27.2954C31.9721 27.3361 32.0755 27.3571 32.18 27.3571C32.2844 27.3571 32.3878 27.3361 32.484 27.2954C32.5802 27.2546 32.6672 27.195 32.74 27.12C33.3301 26.4373 34.0509 25.8797 34.86 25.48C35.6882 25.1655 36.5786 25.049 37.46 25.14C38.9214 25.1822 40.3665 25.4591 41.74 25.96C42.5269 26.2946 43.2153 26.8247 43.74 27.5C44.4322 28.5194 44.9022 29.673 45.1193 30.8859C45.3363 32.0988 45.2957 33.3438 45 34.54C44.9021 35.651 44.4483 36.7007 43.706 37.5331C42.9637 38.3655 41.9725 38.9361 40.88 39.16C38.135 39.741 35.2717 39.2471 32.88 37.78C31.8443 36.8762 31.0061 35.7686 30.4176 34.5264C29.8292 33.2841 29.5032 31.9339 29.46 30.56C29.152 26.9446 29.7215 23.3082 31.12 19.96C32.5067 16.4622 34.3783 13.1767 36.68 10.2C36.8265 10.0083 36.8918 9.76671 36.8619 9.52728C36.8319 9.28786 36.7092 9.06977 36.52 8.92002C36.3315 8.77464 36.0931 8.70985 35.8569 8.73984C35.6208 8.76983 35.4061 8.89214 35.26 9.08002C32.2511 12.7125 29.8838 16.8316 28.26 21.26C27.1404 24.3028 26.6571 27.543 26.84 30.78C26.8603 32.5632 27.2596 34.3217 28.0113 35.9389C28.763 37.556 29.8499 38.9949 31.2 40.16C32.679 41.1446 34.3376 41.8281 36.0809 42.1713C37.8242 42.5144 39.6181 42.5106 41.36 42.16C42.7523 41.949 44.0559 41.3461 45.1184 40.4218C46.1808 39.4974 46.9583 38.2898 47.36 36.94C48.0145 35.1199 48.2018 33.1646 47.9048 31.2533C47.6078 29.342 46.836 27.5357 45.66 26Z' fill='%23121212'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_153_421'%3E%3Crect width='48' height='48' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A") center no-repeat;
+        background-size: contain;
+        display: block;
+        margin-bottom: toRem(20);
+      }
+    }
+  }
+
+  &__mobile {
+    padding-bottom: toRem(40);
+    padding-right: toRem(20);
+
+    .swiper-slide {
+      height: auto;
+    }
+
+    .swiper-pagination {
+      bottom: 0;
+
+      &-bullet {
+        width: toRem(10);
+        height: toRem(10);
+        background-color: $white;
+      }
+
+      &-bullet-active {
+        background-color: $orange;
+      }
+    }
+  }
+
+  &__item {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  &__box {
+    border-radius: 10px;
+    padding: toRem(20);
+
+    &.blue {
+      background-color: $blue;
+    }
+
+    &.orange {
+      background-color: $orange;
+    }
+
+    &.pink {
+      background-color: $pink-primary;
+    }
+
+    &.green {
+      background-color: $green-secondary;
+    }
+
+    &.gray {
+      background-color: $gray;
+
+      .text-sm {
+        color: $dark-primary;
+      }
+    }
   }
 }
 
@@ -519,6 +627,10 @@ $grid-area-values__mobile: (
   .price {
     &-boxes {
       margin: 0 toRem(-20) 0 auto;
+    }
+
+    .cards {
+      grid-template-columns: repeat(3, 1fr);
     }
   }
 }
@@ -632,8 +744,111 @@ $grid-area-values__mobile: (
       padding: toRem(30) toRem(24);
     }
 
-    .text-sm{
+    .text-sm {
       margin-bottom: toRem(100);
+    }
+
+    .cards {
+      gap: toRem(30);
+      grid-template-columns: repeat(5, 1fr);
+
+      .card__item {
+        padding: toRem(20);
+      }
+    }
+  }
+
+  .testimonials {
+    min-height: 100svh;
+    overflow: hidden;
+
+    .h2 {
+      margin-bottom: toRem(100);
+    }
+
+    &__box {
+      border-radius: 20px;
+      padding: toRem(24);
+      min-height: toRem(260);
+
+      &:first-child {
+        grid-column: span 2 / span 2;
+      }
+
+      &:nth-of-type(2) {
+        grid-column-start: 3;
+      }
+
+      &:nth-of-type(3) {
+        grid-column-start: 4;
+      }
+
+      &:nth-of-type(4) {
+        grid-row-start: 2;
+      }
+
+      &:nth-of-type(5) {
+        grid-row-start: 2;
+      }
+
+      &:nth-of-type(6) {
+        grid-column: span 2 / span 2;
+        grid-row-start: 2;
+      }
+    }
+
+    &__desktop {
+      overscroll-behavior: none;
+      width: 600%;
+      height: 100%;
+      display: flex;
+      column-gap: 6vw;
+    }
+
+    &__item {
+      max-width: toRem(1280);
+
+      &:first-child {
+        .testimonials__box {
+          &:nth-child(2) {
+            background: url('../images/testimonials/slide-1-1.jpg') no-repeat center;
+            background-size: cover;
+          }
+
+          &:nth-child(5) {
+            background: url('../images/testimonials/slide-1-2.jpg') no-repeat center;
+            background-size: cover;
+          }
+        }
+      }
+
+      &:nth-of-type(2) {
+        .testimonials__box {
+          &:nth-child(2) {
+            background: url('../images/testimonials/slide-2-1.jpg') no-repeat center;
+            background-size: cover;
+          }
+
+          &:nth-child(5) {
+            background: url('../images/testimonials/slide-2-2.jpg') no-repeat center;
+            background-size: cover;
+          }
+        }
+      }
+
+      &:nth-of-type(3) {
+        .testimonials__box {
+          &:nth-child(2) {
+            background: url('../images/testimonials/slide-3-1.jpg') no-repeat center;
+            background-size: cover;
+          }
+
+          &:nth-child(5) {
+            background: url('../images/testimonials/slide-3-2.jpg') no-repeat center;
+            background-size: cover;
+          }
+        }
+      }
     }
   }
 }

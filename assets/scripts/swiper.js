@@ -46,4 +46,21 @@ document.addEventListener("DOMContentLoaded", function (event) {
             }
         }
     });
+
+    /* Testimonials mobile */
+
+    const testimonialsMobileSlider = new Swiper(".testimonials__mobile", {
+        slidesPerView: 1.2,
+        spaceBetween: 20,
+        centeredSlides: true,
+        pagination: {
+            el: ".swiper-pagination",
+        },
+        breakpoints: {
+            768:{
+                slidesPerView: 2.1,
+                centeredSlides: false
+            }
+        }
+    });
 });
