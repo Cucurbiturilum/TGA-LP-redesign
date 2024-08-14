@@ -1204,6 +1204,142 @@ body {
   color: #121212;
 }
 
+.faq .h2 {
+  font-size: clamp(6.25rem, 4.4643rem + 8.9286vw, 12.5rem);
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-bottom: 3.125rem;
+  text-align: center;
+}
+.faq-tabs {
+  max-width: 80rem;
+  margin: auto;
+}
+.faq-tabs .nav {
+  border: none;
+  margin-bottom: 36px;
+  justify-content: flex-start;
+  column-gap: 1.5rem;
+  flex-wrap: nowrap;
+  overflow-x: scroll;
+  padding-bottom: 0.625rem;
+  padding-right: 1.25rem;
+  margin-right: -1.25rem;
+}
+.faq-tabs .nav-link {
+  padding: 0.75rem 1.875rem;
+  text-transform: uppercase;
+  font-size: clamp(1rem, 0.7143rem + 1.4286vw, 2rem);
+  border: none;
+  border-radius: 9999px;
+  background-color: #121212;
+  color: #ffffff;
+  white-space: nowrap;
+}
+.faq-tabs .nav-link.active {
+  background-color: #02C700;
+  color: #ffffff;
+}
+.faq-tabs .accordion-item {
+  border: 2px solid rgba(0, 0, 0, 0.25) !important;
+  border-radius: 1.25rem;
+  margin-bottom: 1.5rem;
+  overflow: hidden;
+  padding: 1.25rem;
+}
+.faq-tabs .accordion-item:has(> .show) {
+  border-color: #02C700 !important;
+}
+.faq-tabs .accordion-button {
+  padding: 0;
+  font-size: clamp(1.125rem, 0.8571rem + 1.3393vw, 1.5rem);
+  font-weight: 600;
+  color: inherit !important;
+  background-color: transparent !important;
+  box-shadow: none !important;
+  line-height: 1.5;
+  gap: 0.625rem;
+}
+.faq-tabs .accordion-button:after {
+  --bs-accordion-btn-icon-width: 2.5rem;
+  --bs-accordion-btn-icon: url("data:image/svg+xml,%3Csvg width='36' height='42' viewBox='0 0 36 42' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M18 0.0102539C18.8284 0.0102539 19.5 0.781449 19.5 1.73277V18.9579H34.5C35.3284 18.9579 36 19.7291 36 20.6804C36 21.6317 35.3284 22.4029 34.5 22.4029H19.5V39.628C19.5 40.5793 18.8284 41.3505 18 41.3505C17.1716 41.3505 16.5 40.5793 16.5 39.628V22.4029H1.5C0.671573 22.4029 0 21.6317 0 20.6804C0 19.7291 0.671573 18.9579 1.5 18.9579H16.5V1.73277C16.5 0.781448 17.1716 0.0102539 18 0.0102539Z' fill='%23121212'/%3E%3C/svg%3E%0A");
+  --bs-accordion-btn-active-icon: url("data:image/svg+xml,%3Csvg width='36' height='4' viewBox='0 0 36 4' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect y='0.550781' width='36' height='3' rx='1.5' fill='%23121212'/%3E%3C/svg%3E%0A");
+  background-position: center;
+}
+.faq-tabs .accordion-body {
+  padding: 1.5rem 0 0 0;
+}
+
+.schools-location {
+  background-color: #000;
+}
+.schools-location .h2 {
+  margin-bottom: 3.125rem;
+  font-size: clamp(2rem, 1.2045rem + 3.9773vw, 3.75rem);
+}
+.schools-location .school-card {
+  border-radius: 0.625rem;
+  overflow: hidden;
+  background-color: #ffffff;
+}
+.schools-location .school-card:first-of-type {
+  margin-bottom: 2.25rem;
+}
+.schools-location .school-card__img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+.schools-location .school-card__body {
+  padding: 2.25rem 1.5rem;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+.schools-location .school-card__body .location {
+  display: flex;
+  align-items: center;
+}
+.schools-location .school-card__body .location:before {
+  content: url("data:image/svg+xml,%3Csvg width='24' height='25' viewBox='0 0 24 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 24.4307C12 24.4307 21 15.9012 21 9.43066C21 4.4601 16.9706 0.430664 12 0.430664C7.02944 0.430664 3 4.4601 3 9.43066C3 15.9012 12 24.4307 12 24.4307ZM12 13.9307C9.51472 13.9307 7.5 11.9159 7.5 9.43066C7.5 6.94538 9.51472 4.93066 12 4.93066C14.4853 4.93066 16.5 6.94538 16.5 9.43066C16.5 11.9159 14.4853 13.9307 12 13.9307Z' fill='%2302C700'/%3E%3C/svg%3E%0A");
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-right: 1.25rem;
+}
+.schools-location .school-card__body .plus-icon {
+  width: 48px;
+  height: 48px;
+  position: absolute;
+  background: url("data:image/svg+xml,%3Csvg width='48' height='49' viewBox='0 0 48 49' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M24 6.22449C24.8284 6.22449 25.5 6.89606 25.5 7.72449V22.7245H40.5C41.3284 22.7245 42 23.3961 42 24.2245C42 25.0529 41.3284 25.7245 40.5 25.7245H25.5V40.7245C25.5 41.5529 24.8284 42.2245 24 42.2245C23.1716 42.2245 22.5 41.5529 22.5 40.7245V25.7245H7.5C6.67157 25.7245 6 25.0529 6 24.2245C6 23.3961 6.67157 22.7245 7.5 22.7245H22.5V7.72449C22.5 6.89606 23.1716 6.22449 24 6.22449Z' fill='black'/%3E%3C/svg%3E%0A") center no-repeat;
+  background-size: contain;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  width: 2rem;
+  height: 2rem;
+  position: relative;
+  flex-shrink: 0;
+  align-self: end;
+}
+.schools-location .school-card__body .plus-icon:hover {
+  transform: rotate(90deg);
+}
+
+.need-help__social {
+  flex-direction: column;
+  gap: 1.25rem;
+}
+.need-help__social-item {
+  gap: 0.75rem;
+}
+.need-help__social-item svg {
+  width: 3rem;
+  height: 3rem;
+}
+.need-help__social-link {
+  align-self: center;
+  font-weight: 400;
+}
+
 @media only screen and (min-width: 768px) {
   .features .wrapper {
     grid-template-columns: repeat(2, 1fr);
@@ -1270,6 +1406,21 @@ body {
   }
   .price .cards {
     grid-template-columns: repeat(3, 1fr);
+  }
+  .schools-location .wrapper {
+    display: flex;
+    gap: 2.25rem;
+  }
+  .schools-location .school-card {
+    flex-basis: 50%;
+  }
+  .schools-location .school-card:first-of-type {
+    margin-bottom: 0;
+  }
+  .need-help__social {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 2.25rem;
   }
 }
 @media only screen and (min-width: 992px) {
@@ -1439,6 +1590,39 @@ body {
   .testimonials__item:nth-of-type(3) .testimonials__box:nth-child(5) {
     background: url("../images/testimonials/slide-3-2.jpg") no-repeat center;
     background-size: cover;
+  }
+  .faq .h2 {
+    margin-bottom: 6.25rem;
+  }
+  .faq-tabs .nav {
+    justify-content: center;
+    padding-right: 0;
+    margin-left: 0;
+  }
+  .faq .accordion-body {
+    padding-right: 2.25rem;
+  }
+  .schools-location .container {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    max-width: 1600px;
+  }
+  .schools-location .h2 {
+    margin-bottom: 0;
+    max-width: 300px;
+  }
+  .schools-location .school-card__img {
+    width: 100%;
+    height: 20vw;
+    max-height: 400px;
+  }
+  .need-help__social {
+    gap: 3.75rem;
+  }
+  .need-help__social-item svg {
+    width: 4.5rem;
+    height: 4.5rem;
   }
 }
 @media only screen and (min-width: 1600px) {
