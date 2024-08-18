@@ -4,7 +4,7 @@
 
 .container{
   padding: toRem(60) toRem(20);
-  max-width: 100%;
+  max-width: 2520px;
 
   @include breakpoint(lg){
     padding: toRem(100) 2%;
@@ -21,7 +21,7 @@
 @include breakpoint(hd){
   @for $i from 1 through 12 {
     .col-hd-#{$i} {
-      width: calc(100% / #{$i});
+      width: calc(100% /12 * #{$i});
     }
   }
 }
@@ -29,7 +29,11 @@
 @include breakpoint(4k){
   @for $i from 1 through 12 {
     .col-4k-#{$i} {
-      width: calc(100% / #{$i});
+      width: calc((100% / 12) * #{$i});
+    }
+
+    .offset-4k-#{$i}{
+      margin-left: calc((100% / 12) * #{$i});
     }
   }
 }

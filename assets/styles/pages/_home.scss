@@ -85,7 +85,6 @@ $grid-area-values__mobile: (
     &__item {
       height: auto;
       width: auto;
-      border-radius: toRem(10);
       overflow: hidden;
       display: inline-flex;
       justify-content: center;
@@ -96,11 +95,13 @@ $grid-area-values__mobile: (
         width: auto;
         height: 140px;
         object-fit: cover;
+        border-radius: toRem(10);
       }
     }
 
     &__columns {
       display: flex;
+      column-gap: toRem(10);
     }
   }
 }
@@ -117,6 +118,20 @@ $grid-area-values__mobile: (
           transparent
   );
   z-index: 99;
+  position: relative;
+  margin-bottom: -1px;
+
+  &-bg{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: calc(100% - 40px);
+    height: calc(100% - 200px);
+    background-color: $black;
+    z-index: -1;
+    border-radius: toRem(20) toRem(20) 0 0;
+  }
 
   .wrapper {
     border-radius: 20px;
@@ -266,6 +281,7 @@ $grid-area-values__mobile: (
   $columns: 4;
   $rows: 4;
   $gap: 10px;
+  overflow: hidden;
 
   .wrapper {
     display: grid;
@@ -282,7 +298,7 @@ $grid-area-values__mobile: (
     overflow: hidden;
 
     &:nth-of-type(1) {
-      @include grid-item($bg-url: "../images/grid/pexels-artempodrez-6941450-_1_.webp", $column-span: 2);
+      @include grid-item($bg-url: "https://placehold.co/600x400", $column-span: 2);
     }
 
     &:nth-of-type(2) {
@@ -294,11 +310,11 @@ $grid-area-values__mobile: (
     }
 
     &:nth-of-type(4) {
-      @include grid-item($bg-url: "../images/grid/pexels-olly-3755494.webp", $row-start: 2);
+      @include grid-item($bg-url: "https://placehold.co/600x400", $row-start: 2);
     }
 
     &:nth-of-type(5) {
-      @include grid-item($bg-url: "../images/grid/pexels-olly-3768126.webp", $column-span: 2, $row-start: 3);
+      @include grid-item($bg-url: "https://placehold.co/600x400", $column-span: 2, $row-start: 3);
     }
 
     &:nth-of-type(6) {
@@ -306,7 +322,7 @@ $grid-area-values__mobile: (
     }
 
     &:nth-of-type(7) {
-      @include grid-item($bg-url: "../images/grid/pexels-cottonbro-4778611.webp", $row-start: 4);
+      @include grid-item($bg-url: "https://placehold.co/600x400", $row-start: 4);
     }
 
     &:nth-of-type(8) {
@@ -314,7 +330,7 @@ $grid-area-values__mobile: (
     }
 
     &:nth-of-type(9) {
-      @include grid-item($bg-url: "../images/grid/pexels-enginakyurt-2943603.webp", $display: none);
+      @include grid-item($bg-url: "https://placehold.co/600x400", $display: none);
     }
 
     .plus-icon {
@@ -335,6 +351,8 @@ $grid-area-values__mobile: (
 
 .price {
   background-color: $black;
+  z-index: 9999;
+  position: relative;
 
   .h2 {
     margin-bottom: toRem(50);
@@ -727,7 +745,22 @@ $grid-area-values__mobile: (
   }
 }
 
+
 @include breakpoint(md) {
+
+  .home-hero {
+
+    .hero-slider {
+      &__item {
+
+        img {
+          height: 100%;
+          max-height: 300px;
+        }
+      }
+    }
+  }
+
   .features {
     .wrapper {
       grid-template-columns: repeat(2, 1fr);
@@ -844,18 +877,23 @@ $grid-area-values__mobile: (
       }
 
       &__item {
-        border-radius: toRem(20);
-
         img {
           width: 100%;
           height: auto;
           object-fit: cover;
+          border-radius: toRem(20);
+          max-height: toRem(300);
         }
       }
     }
   }
 
   .features {
+
+    &-bg{
+      width: 96%;
+    }
+
     .wrapper {
       padding: 48px;
     }
@@ -935,7 +973,6 @@ $grid-area-values__mobile: (
   }
 
   .testimonials {
-    min-height: 100svh;
     overflow: hidden;
 
     .h2 {
@@ -1086,6 +1123,28 @@ $grid-area-values__mobile: (
 }
 
 @include breakpoint(xxl) {
+
+  .home-hero {
+    .hero-slider {
+      position: absolute;
+      &__columns {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        gap: 32px;
+
+        img{
+          height: 100%;
+
+
+          &:nth-of-type(3) {
+            grid-column: span 2 / span 2;
+          }
+        }
+      }
+    }
+  }
+
   .features {
     .wrapper {
       grid-template-columns: repeat(4, 1fr);
@@ -1109,3 +1168,16 @@ $grid-area-values__mobile: (
     }
   }
 }
+
+@include breakpoint(4k){
+  .home-hero {
+    .hero-slider {
+      &__columns {
+        img{
+          max-height: toRem(600);
+        }
+      }
+    }
+  }
+}
+

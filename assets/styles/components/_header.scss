@@ -4,6 +4,8 @@
 
 .header-main{
   padding: toRem(20);
+  max-width: 2520px;
+  margin: auto;
 
   &__logo{
     max-width: toRem(300);

@@ -6,3 +6,6 @@ function calculateHeight() {
     const screenHeight = window.innerHeight;
     document.querySelector('.home-hero .row').style.minHeight = `${screenHeight - headerHeight}px`;
 }
+
+/* Curren year */
+document.getElementById("curren-year").innerHTML = new Date().getFullYear();

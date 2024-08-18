@@ -1,0 +1,69 @@
+@use '../abstracts/colours' as *;
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.footer-main{
+  background-color: $black;
+
+  .footer__logo{
+    img{
+      max-width: 300px;
+    }
+  }
+
+  &__nav{
+    color: $white;
+    display: flex;
+    flex-direction: column;
+    row-gap: toRem(32);
+    font-size: toRem(16);
+    a{
+      text-decoration: none;
+      transition: $primary-animation;
+      font-weight: 300;
+      &:hover{
+        color: $green-primary;
+      }
+    }
+  }
+
+  &__legal{
+    padding-top: toRem(100);
+    margin-top: toRem(100);
+    border-top: 1px solid $white-08;
+    color: $white-75;
+    font-weight: 300;
+    column-gap: toRem(36);
+
+    > * {
+      flex: 1 1 auto;
+    }
+  }
+
+  &__social{
+    display: flex;
+    justify-content: flex-end;
+    column-gap: toRem(12);
+    &__item{
+      width: toRem(48);
+      height: toRem(48);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: toRem(8);
+      border-radius: 4px;
+      border: 1px solid $white-75;
+      transition: $primary-animation;
+      justify-self: flex-end;
+
+      svg{
+        width: 100%;
+        height: 100%;
+      }
+      &:hover{
+        background-color: $green-primary;
+        border-color: $green-primary;
+      }
+    }
+  }
+}
