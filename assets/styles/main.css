@@ -967,6 +967,7 @@ body {
   grid-template-rows: repeat(4, 1fr);
   gap: 10px;
   margin-bottom: 2.5rem;
+  z-index: 99;
 }
 .blocks-grid__item {
   padding: 1.875rem 0.75rem;
@@ -975,7 +976,7 @@ body {
   overflow: hidden;
 }
 .blocks-grid__item:nth-of-type(1) {
-  background: url("https://placehold.co/600x400") center no-repeat;
+  background: url("../images/grid/IMG_9722.webp") center no-repeat;
   background-size: cover;
   grid-column: span 2/span 2;
   display: block;
@@ -1022,18 +1023,19 @@ body {
   position: relative;
 }
 .blocks-grid__item:nth-of-type(4) {
-  background: url("https://placehold.co/600x400") center no-repeat;
+  background: url("../images/grid/DSC00504.jpg") center no-repeat;
   background-size: cover;
   grid-column: span 1/span 1;
   grid-row-start: 2;
   display: block;
+  background-position: right 5%;
 }
 .blocks-grid__item:nth-of-type(4) > * {
   z-index: 2;
   position: relative;
 }
 .blocks-grid__item:nth-of-type(5) {
-  background: url("https://placehold.co/600x400") center no-repeat;
+  background: url("../images/grid/_06A0056_11zon.webp") center no-repeat;
   background-size: cover;
   grid-column: span 2/span 2;
   grid-row-start: 3;
@@ -1063,11 +1065,12 @@ body {
   position: relative;
 }
 .blocks-grid__item:nth-of-type(7) {
-  background: url("https://placehold.co/600x400") center no-repeat;
+  background: url("../images/grid/DSC02919.jpg") center no-repeat;
   background-size: cover;
   grid-column: span 1/span 1;
   grid-row-start: 4;
   display: block;
+  background-position: right 1%;
 }
 .blocks-grid__item:nth-of-type(7) > * {
   z-index: 2;
@@ -1093,7 +1096,7 @@ body {
   position: relative;
 }
 .blocks-grid__item:nth-of-type(9) {
-  background: url("https://placehold.co/600x400") center no-repeat;
+  background: url("../images/grid/DSC_9845_11zon.webp") center no-repeat;
   background-size: cover;
   grid-column: span 1/span 1;
   display: none;
@@ -1126,7 +1129,6 @@ body {
 
 .price {
   background-color: #000;
-  z-index: 9999;
   position: relative;
 }
 .price .h2 {
@@ -1503,6 +1505,10 @@ body {
   .features__item:nth-of-type(8) {
     margin-top: 1.375rem;
   }
+  .blocks-grid .container {
+    padding-top: 3.125rem;
+    padding-bottom: 3.125rem;
+  }
   .blocks-grid .wrapper {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -1622,7 +1628,7 @@ body {
     min-height: 100svh;
   }
   .blocks-grid .wrapper {
-    height: calc(100svh - 12.5rem);
+    height: calc(100svh - 10rem);
   }
   .blocks-grid__item {
     padding: 1.875rem 1.25rem;
@@ -1653,6 +1659,7 @@ body {
   }
   .testimonials {
     overflow: hidden;
+    min-height: 100vh;
   }
   .testimonials .h2 {
     margin-bottom: 6.25rem;
@@ -1683,7 +1690,7 @@ body {
   }
   .testimonials__desktop {
     overscroll-behavior: none;
-    width: 600%;
+    width: 300%;
     height: 100%;
     display: flex;
     column-gap: 6vw;

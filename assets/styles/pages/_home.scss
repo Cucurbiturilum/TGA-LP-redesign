@@ -121,7 +121,7 @@ $grid-area-values__mobile: (
   position: relative;
   margin-bottom: -1px;
 
-  &-bg{
+  &-bg {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -289,6 +289,7 @@ $grid-area-values__mobile: (
     grid-template-rows: repeat($rows, 1fr);
     gap: $gap;
     margin-bottom: toRem(40);
+    z-index: 99;
   }
 
   &__item {
@@ -298,7 +299,7 @@ $grid-area-values__mobile: (
     overflow: hidden;
 
     &:nth-of-type(1) {
-      @include grid-item($bg-url: "https://placehold.co/600x400", $column-span: 2);
+      @include grid-item($bg-url: "../images/grid/IMG_9722.webp", $column-span: 2);
     }
 
     &:nth-of-type(2) {
@@ -310,11 +311,12 @@ $grid-area-values__mobile: (
     }
 
     &:nth-of-type(4) {
-      @include grid-item($bg-url: "https://placehold.co/600x400", $row-start: 2);
+      @include grid-item($bg-url: "../images/grid/DSC00504.jpg", $row-start: 2);
+      background-position: right 5%;
     }
 
     &:nth-of-type(5) {
-      @include grid-item($bg-url: "https://placehold.co/600x400", $column-span: 2, $row-start: 3);
+      @include grid-item($bg-url: "../images/grid/_06A0056_11zon.webp", $column-span: 2, $row-start: 3);
     }
 
     &:nth-of-type(6) {
@@ -322,7 +324,8 @@ $grid-area-values__mobile: (
     }
 
     &:nth-of-type(7) {
-      @include grid-item($bg-url: "https://placehold.co/600x400", $row-start: 4);
+      @include grid-item($bg-url: "../images/grid/DSC02919.jpg", $row-start: 4);
+      background-position: right 1%;
     }
 
     &:nth-of-type(8) {
@@ -330,7 +333,7 @@ $grid-area-values__mobile: (
     }
 
     &:nth-of-type(9) {
-      @include grid-item($bg-url: "https://placehold.co/600x400", $display: none);
+      @include grid-item($bg-url: "../images/grid/DSC_9845_11zon.webp", $display: none);
     }
 
     .plus-icon {
@@ -351,7 +354,6 @@ $grid-area-values__mobile: (
 
 .price {
   background-color: $black;
-  z-index: 9999;
   position: relative;
 
   .h2 {
@@ -782,6 +784,11 @@ $grid-area-values__mobile: (
   }
 
   .blocks-grid {
+    .container {
+      padding-top: toRem(50);
+      padding-bottom: toRem(50);
+    }
+
     .wrapper {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -890,7 +897,7 @@ $grid-area-values__mobile: (
 
   .features {
 
-    &-bg{
+    &-bg {
       width: 96%;
     }
 
@@ -931,7 +938,7 @@ $grid-area-values__mobile: (
     min-height: 100svh;
 
     .wrapper {
-      height: calc(100svh - (6.25rem * 2));
+      height: calc(100svh - 10rem);
     }
 
     &__item {
@@ -974,6 +981,7 @@ $grid-area-values__mobile: (
 
   .testimonials {
     overflow: hidden;
+    min-height: 100vh;
 
     .h2 {
       margin-bottom: toRem(100);
@@ -1012,7 +1020,7 @@ $grid-area-values__mobile: (
 
     &__desktop {
       overscroll-behavior: none;
-      width: 600%;
+      width: 300%;
       height: 100%;
       display: flex;
       column-gap: 6vw;
@@ -1127,13 +1135,14 @@ $grid-area-values__mobile: (
   .home-hero {
     .hero-slider {
       position: absolute;
+
       &__columns {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(2, 1fr);
         gap: 32px;
 
-        img{
+        img {
           height: 100%;
 
 
@@ -1169,11 +1178,11 @@ $grid-area-values__mobile: (
   }
 }
 
-@include breakpoint(4k){
+@include breakpoint(4k) {
   .home-hero {
     .hero-slider {
       &__columns {
-        img{
+        img {
           max-height: toRem(600);
         }
       }
