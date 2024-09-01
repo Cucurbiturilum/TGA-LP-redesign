@@ -806,7 +806,7 @@ body {
 }
 @media only screen and (min-width: 2560px) {
   .modal-dialog {
-    --bs-modal-width: 1600px;
+    --bs-modal-width: 1440px;
   }
 }
 
@@ -857,6 +857,7 @@ body {
 .home-hero .hero-slider__columns {
   display: flex;
   column-gap: 0.625rem;
+  flex-wrap: wrap;
 }
 
 .features {
@@ -970,6 +971,7 @@ body {
   background-size: contain;
   transition: all 0.3s ease;
   cursor: pointer;
+  display: block;
   right: 1.25rem;
   bottom: 1rem;
 }
@@ -1037,6 +1039,7 @@ body {
 
 .blocks-grid {
   overflow: hidden;
+  background-color: #ffffff;
 }
 .blocks-grid .wrapper {
   display: grid;
@@ -1164,8 +1167,8 @@ body {
   content: url("../images/grid/G-logo.svg");
   position: absolute;
   transform: rotate(10deg) scale(1.4);
-  top: -70%;
-  right: -10%;
+  top: 70%;
+  right: 10%;
   z-index: 1;
 }
 .blocks-grid__item:nth-of-type(8) > * {
@@ -1190,10 +1193,12 @@ body {
   background-size: contain;
   transition: all 0.3s ease;
   cursor: pointer;
+  display: block;
   width: 2rem;
   height: 2rem;
   right: 1.25rem;
   bottom: 0.625rem;
+  position: absolute !important;
 }
 .blocks-grid__item .plus-icon:hover {
   transform: rotate(90deg);
@@ -1339,6 +1344,8 @@ body {
 .testimonials {
   background-color: #000;
   padding-right: 0 !important;
+  position: relative;
+  z-index: 99;
 }
 .testimonials .h2 {
   margin-bottom: 3.125rem;
@@ -1358,20 +1365,6 @@ body {
 .testimonials__mobile {
   padding-bottom: 2.5rem;
   padding-right: 1.25rem;
-}
-.testimonials__mobile .swiper-slide {
-  height: auto;
-}
-.testimonials__mobile .swiper-pagination {
-  bottom: 0;
-}
-.testimonials__mobile .swiper-pagination-bullet {
-  width: 0.625rem;
-  height: 0.625rem;
-  background-color: #ffffff;
-}
-.testimonials__mobile .swiper-pagination-bullet-active {
-  background-color: #FEA726;
 }
 .testimonials__item {
   display: grid;
@@ -1400,6 +1393,39 @@ body {
 }
 .testimonials__box.gray .text-sm {
   color: #121212;
+}
+.testimonials .swiper-slide {
+  height: auto;
+}
+.testimonials .swiper-pagination {
+  bottom: 0;
+}
+.testimonials .swiper-pagination-bullet {
+  width: 0.625rem;
+  height: 0.625rem;
+  background-color: #ffffff;
+}
+.testimonials .swiper-pagination-bullet-active {
+  background-color: #FEA726;
+}
+.testimonials .swiper-button-next, .testimonials .swiper-button-prev {
+  position: absolute;
+  bottom: 4rem;
+  top: auto;
+  width: 2rem;
+  height: 2rem;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  padding: 1rem;
+  left: calc(50% + 3.5rem);
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='16' width='14' viewBox='0 0 448 512'%3E%3C!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--%3E%3Cpath fill='%23ffffff' d='M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z'/%3E%3C/svg%3E") center no-repeat;
+}
+.testimonials .swiper-button-next:after, .testimonials .swiper-button-prev:after {
+  display: none;
+}
+.testimonials .swiper-button-prev {
+  left: calc(50% - 3.5rem);
+  transform: scale(-1);
 }
 
 .faq .h2 {
@@ -1512,6 +1538,7 @@ body {
   background-size: contain;
   transition: all 0.3s ease;
   cursor: pointer;
+  display: block;
   width: 2rem;
   height: 2rem;
   position: relative;
@@ -1664,6 +1691,9 @@ body {
     border-radius: 1.25rem;
     max-height: 18.75rem;
   }
+  .home-hero .hero-slider__columns {
+    row-gap: 1.875rem;
+  }
   .features-bg {
     width: 96%;
   }
@@ -1737,7 +1767,9 @@ body {
   }
   .testimonials {
     overflow: hidden;
-    min-height: 100vh;
+  }
+  .testimonials-wrapper {
+    padding-bottom: 3rem;
   }
   .testimonials .h2 {
     margin-bottom: 6.25rem;
@@ -1766,15 +1798,8 @@ body {
     grid-column: span 2/span 2;
     grid-row-start: 2;
   }
-  .testimonials__desktop {
-    overscroll-behavior: none;
-    width: 300%;
-    height: 100%;
-    display: flex;
-    column-gap: 6vw;
-  }
   .testimonials__item {
-    max-width: 80rem;
+    max-width: 87.5rem;
   }
   .testimonials__item:first-child .testimonials__box:nth-child(2) {
     background: url("../images/testimonials/slide-1-1.jpg") no-repeat center;
@@ -1807,6 +1832,7 @@ body {
     justify-content: center;
     padding-right: 0;
     margin-left: 0;
+    overflow: hidden;
   }
   .faq .accordion-body {
     padding-right: 2.25rem;
@@ -1843,6 +1869,7 @@ body {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
     gap: 32px;
+    width: 100%;
   }
   .home-hero .hero-slider__columns img {
     height: 100%;
@@ -1883,6 +1910,81 @@ body {
   }
   .features__item__list {
     max-width: 75%;
+  }
+  .blocks-grid__item:nth-of-type(2) {
+    background: #94BDFF;
+    background-size: cover;
+    grid-column: span 2/span 2;
+    display: block;
+  }
+  .blocks-grid__item:nth-of-type(2):before {
+    content: url("../images/grid/G-logo.svg");
+    position: absolute;
+    transform: rotate(346deg) scale(2.8);
+    top: 30%;
+    right: -10%;
+    z-index: 1;
+  }
+  .blocks-grid__item:nth-of-type(2) > * {
+    z-index: 2;
+    position: relative;
+  }
+  .blocks-grid__item:nth-of-type(3) {
+    background: #FEA726;
+    background-size: cover;
+    grid-column: span 3/span 3;
+    grid-row-start: 2;
+    display: block;
+  }
+  .blocks-grid__item:nth-of-type(3):before {
+    content: url("../images/grid/G-logo.svg");
+    position: absolute;
+    transform: rotate(10deg) scale(2.8);
+    top: -45%;
+    right: -10%;
+    z-index: 1;
+  }
+  .blocks-grid__item:nth-of-type(3) > * {
+    z-index: 2;
+    position: relative;
+  }
+  .blocks-grid__item:nth-of-type(6) {
+    background: #BEF941;
+    background-size: cover;
+    grid-column: span 2/span 2;
+    grid-row-start: 3;
+    display: block;
+  }
+  .blocks-grid__item:nth-of-type(6):before {
+    content: url("../images/grid/G-logo.svg");
+    position: absolute;
+    transform: rotate(10deg) scale(1.8);
+    top: 50%;
+    right: 50%;
+    z-index: 1;
+  }
+  .blocks-grid__item:nth-of-type(6) > * {
+    z-index: 2;
+    position: relative;
+  }
+  .blocks-grid__item:nth-of-type(8) {
+    background: #E4C3EE;
+    background-size: cover;
+    grid-column: span 3/span 3;
+    grid-row-start: 4;
+    display: block;
+  }
+  .blocks-grid__item:nth-of-type(8):before {
+    content: url("../images/grid/G-logo.svg");
+    position: absolute;
+    transform: rotate(10deg) scale(2.8);
+    top: 70%;
+    right: 10%;
+    z-index: 1;
+  }
+  .blocks-grid__item:nth-of-type(8) > * {
+    z-index: 2;
+    position: relative;
   }
 }
 @media only screen and (min-width: 2560px) {
@@ -2231,7 +2333,7 @@ body {
 }
 .projects__item {
   overflow: hidden;
-  border-radius: 1.25rem;
+  border-radius: 1.25rem 1.25rem 0 0;
   row-gap: 1.5rem;
   display: flex;
   flex-direction: column;
@@ -2299,6 +2401,11 @@ body {
   }
   .projects-type__item {
     padding: 1.875rem;
+  }
+}
+@media only screen and (min-width: 2560px) {
+  .projects__item-images {
+    height: 31.25rem;
   }
 }
 

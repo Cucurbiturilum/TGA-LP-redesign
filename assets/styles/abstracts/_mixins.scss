@@ -36,6 +36,7 @@
   background-size: contain;
   transition: $primary-animation;
   cursor: pointer;
+  display: block;
 
   &:hover {
     transform: rotate(90deg);

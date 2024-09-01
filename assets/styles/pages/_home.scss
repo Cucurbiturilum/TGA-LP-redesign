@@ -102,6 +102,7 @@ $grid-area-values__mobile: (
     &__columns {
       display: flex;
       column-gap: toRem(10);
+      flex-wrap: wrap;
     }
   }
 }
@@ -282,6 +283,7 @@ $grid-area-values__mobile: (
   $rows: 4;
   $gap: 10px;
   overflow: hidden;
+  background-color: $white;
 
   .wrapper {
     display: grid;
@@ -329,7 +331,7 @@ $grid-area-values__mobile: (
     }
 
     &:nth-of-type(8) {
-      @include grid-item($bg-color: $pink-light, $column-span: 3, $row-start: 4, $logo-pos: (-70%, -10%), $logo-scale: 01.4, $logo-rotation: 10deg);
+      @include grid-item($bg-color: $pink-light, $column-span: 3, $row-start: 4, $logo-pos: (70%, 10%), $logo-scale: 01.4, $logo-rotation: 10deg);
     }
 
     &:nth-of-type(9) {
@@ -342,6 +344,7 @@ $grid-area-values__mobile: (
       height: toRem(32);
       right: toRem(20);
       bottom: toRem(10);
+      position: absolute!important;
     }
 
     &-title {
@@ -513,6 +516,8 @@ $grid-area-values__mobile: (
 .testimonials {
   background-color: $black;
   padding-right: 0 !important;
+  position: relative;
+  z-index: 99;
 
   .h2 {
     margin-bottom: toRem(50);
@@ -537,24 +542,6 @@ $grid-area-values__mobile: (
   &__mobile {
     padding-bottom: toRem(40);
     padding-right: toRem(20);
-
-    .swiper-slide {
-      height: auto;
-    }
-
-    .swiper-pagination {
-      bottom: 0;
-
-      &-bullet {
-        width: toRem(10);
-        height: toRem(10);
-        background-color: $white;
-      }
-
-      &-bullet-active {
-        background-color: $orange;
-      }
-    }
   }
 
   &__item {
@@ -592,6 +579,50 @@ $grid-area-values__mobile: (
       }
     }
   }
+
+  .swiper {
+    &-slide {
+      height: auto;
+    }
+
+    &-pagination {
+      bottom: 0;
+
+      &-bullet {
+        width: toRem(10);
+        height: toRem(10);
+        background-color: $white;
+      }
+
+      &-bullet-active {
+        background-color: $orange;
+      }
+    }
+
+    &-button-next,
+    &-button-prev {
+      position: absolute;
+      bottom: 4rem;
+      top: auto;
+      width: 2rem;
+      height: 2rem;
+      border: 2px solid #fff;
+      border-radius: 50%;
+      padding: 1rem;
+      left: calc(50% + 3.5rem);
+      background: url($svgIcon) center no-repeat;
+
+      &:after {
+        display: none;
+      }
+    }
+
+    &-button-prev {
+      left: calc(50% - 3.5rem);
+      transform: scale(-1);
+    }
+  }
+
 }
 
 .faq {
@@ -893,6 +924,10 @@ $grid-area-values__mobile: (
           max-height: toRem(300);
         }
       }
+
+      &__columns {
+        row-gap: toRem(30);
+      }
     }
   }
 
@@ -982,7 +1017,10 @@ $grid-area-values__mobile: (
 
   .testimonials {
     overflow: hidden;
-    min-height: 100vh;
+
+    &-wrapper {
+      padding-bottom: toRem(48);
+    }
 
     .h2 {
       margin-bottom: toRem(100);
@@ -1019,16 +1057,8 @@ $grid-area-values__mobile: (
       }
     }
 
-    &__desktop {
-      overscroll-behavior: none;
-      width: 300%;
-      height: 100%;
-      display: flex;
-      column-gap: 6vw;
-    }
-
     &__item {
-      max-width: toRem(1280);
+      max-width: toRem(1400);
 
       &:first-child {
         .testimonials__box {
@@ -1084,6 +1114,7 @@ $grid-area-values__mobile: (
         justify-content: center;
         padding-right: 0;
         margin-left: 0;
+        overflow: hidden;
       }
     }
 
@@ -1142,6 +1173,7 @@ $grid-area-values__mobile: (
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(2, 1fr);
         gap: 32px;
+        width: 100%;
 
         img {
           height: 100%;
@@ -1177,9 +1209,31 @@ $grid-area-values__mobile: (
       }
     }
   }
+
+  .blocks-grid {
+    &__item {
+
+      &:nth-of-type(2) {
+        @include grid-item($bg-color: $blue, $column-span: 2, $logo-pos: (30%, -10%), $logo-scale: 2.8, $logo-rotation: 346deg);
+      }
+
+      &:nth-of-type(3) {
+        @include grid-item($bg-color: $orange, $column-span: 3, $row-start: 2, $logo-pos: (-45%, -10%), $logo-scale: 2.8, $logo-rotation: 10deg);
+      }
+
+      &:nth-of-type(6) {
+        @include grid-item($bg-color: $green-secondary, $column-span: 2, $row-start: 3, $logo-pos: (50%, 50%), $logo-scale: 1.8, $logo-rotation: 10deg);
+      }
+
+      &:nth-of-type(8) {
+        @include grid-item($bg-color: $pink-light, $column-span: 3, $row-start: 4, $logo-pos: (70%, 10%), $logo-scale: 2.8, $logo-rotation: 10deg);
+      }
+    }
+  }
 }
 
 @include breakpoint(4k) {
+
   .home-hero {
     .hero-slider {
       &__columns {

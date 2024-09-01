@@ -31,8 +31,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
         const blockGridSection = document.querySelector(".blocks-grid");
         const priceSection = document.querySelector(".price");
 
-        console.log(priceSection, blockGridSection);
-
         if (blockGridSection && priceSection) {
             let gridBlocksTimeline = gsap.timeline({
                 scrollTrigger: {
@@ -46,7 +44,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
             })
 
             gridBlocksTimeline.to('.blocks-grid .wrapper', {
-                scale: 3,
+                scale: 2,
                 delay: 0.25,
             });
 
@@ -63,31 +61,10 @@ document.addEventListener("DOMContentLoaded", function (event) {
             ScrollTrigger.create({
                 trigger: blockGridSection,
                 start: 'top top',
-                end: '+=200%',
+                end: '+=150%',
                 pin: true,
                 pinSpacing: false,
                 toggleActions: "restart none none reverse",
-            });
-        }
-    }
-
-    /* Testimonials */
-
-    function testimonialsAnimation() {
-        let sections = gsap.utils.toArray(".testimonials__item");
-
-        if (sections.length > 0) {
-            gsap.to(sections, {
-                xPercent: -100 * (sections.length - 1),
-                ease: "none",
-                scrollTrigger: {
-                    trigger: ".testimonials",
-                    start: 'top top',
-                    end: '+=4000px',
-                    pin: true,
-                    scrub: 1,
-                    snap: 1 / (sections.length - 1),
-                }
             });
         }
     }
@@ -96,7 +73,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
     ScrollTrigger.matchMedia({
         "(min-width: 1024px)": function () {
             gridBlocksAnimation();
-            testimonialsAnimation()
         },
         all: function () {
             /* Features Section */

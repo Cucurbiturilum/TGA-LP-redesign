@@ -67,7 +67,7 @@
   }
   @include breakpoint(4k){
     &-dialog{
-      --bs-modal-width: 1600px;
+      --bs-modal-width: 1440px;
     }
   }
 }

@@ -36,6 +36,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
             centeredSlides: true,
             pagination: {
                 el: ".swiper-pagination",
+                clickable: true,
             },
             breakpoints: {
                 768: {
@@ -52,12 +53,14 @@ document.addEventListener("DOMContentLoaded", function (event) {
     }
 
 
-    /* Testimonials mobile */
+    /* Testimonials */
 
-    const testimonials__mobile = document.querySelector(".testimonials__mobile");
+    const testimonialsMobile = document.querySelector(".testimonials__mobile");
+    const testimonialsDesktop = document.querySelector(".testimonials__desktop");
+    let vwInPx = Math.round(window.innerWidth / 100);
 
-    if (testimonials__mobile) {
-        const testimonialsMobileSlider = new Swiper(testimonials__mobile, {
+    if (testimonialsMobile) {
+        const testimonialsMobileSlider = new Swiper(testimonialsMobile, {
             slidesPerView: 1.2,
             spaceBetween: 20,
             centeredSlides: true,
@@ -70,6 +73,18 @@ document.addEventListener("DOMContentLoaded", function (event) {
                     centeredSlides: false
                 }
             }
+        });
+    }
+
+    if (testimonialsDesktop) {
+        const testimonialsDesktopSlider = new Swiper(testimonialsDesktop, {
+            slidesPerView: 'auto',
+            spaceBetween: 10 * vwInPx,
+            centeredSlides: true,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
         });
     }
 
