@@ -14,6 +14,8 @@
 --------------------------------------------- */
 @forward "components/header";
 @forward "components/footer";
+@forward "components/masonry-gallery";
+@forward "components/modal";
 
 /* Pages
 --------------------------------------------- */
@@ -22,3 +24,12 @@
 
 /* Modals
 --------------------------------------------- */
+
+@forward "modals/educational-programs";
+@forward "modals/groups";
+@forward "modals/job";
+@forward "modals/mission";
+@forward "modals/mentorship";
+@forward "modals/projects";
+@forward "modals/team";
+@forward "modals/vision";

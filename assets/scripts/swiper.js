@@ -27,40 +27,73 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
     /* Price box */
 
-    const priceBoxes = new Swiper(".price-boxes", {
-        slidesPerView: 1.2,
-        spaceBetween: 20,
-        centeredSlides: true,
-        pagination: {
-            el: ".swiper-pagination",
-        },
-        breakpoints: {
-            768:{
-                slidesPerView: 2.1,
-                centeredSlides: false
+    const priceBoxes = document.querySelector(".price-boxes");
+
+    if (priceBoxes) {
+        const priceBoxesSlider = new Swiper(priceBoxes, {
+            slidesPerView: 1.2,
+            spaceBetween: 20,
+            centeredSlides: true,
+            pagination: {
+                el: ".swiper-pagination",
             },
-            992: {
-                slidesPerView: 3,
-                spaceBetween: 30,
-                centeredSlides: false
+            breakpoints: {
+                768: {
+                    slidesPerView: 2.1,
+                    centeredSlides: false
+                },
+                992: {
+                    slidesPerView: 3,
+                    spaceBetween: 30,
+                    centeredSlides: false
+                }
             }
-        }
-    });
+        });
+    }
+
 
     /* Testimonials mobile */
 
-    const testimonialsMobileSlider = new Swiper(".testimonials__mobile", {
-        slidesPerView: 1.2,
-        spaceBetween: 20,
-        centeredSlides: true,
-        pagination: {
-            el: ".swiper-pagination",
-        },
-        breakpoints: {
-            768:{
-                slidesPerView: 2.1,
-                centeredSlides: false
+    const testimonials__mobile = document.querySelector(".testimonials__mobile");
+
+    if (testimonials__mobile) {
+        const testimonialsMobileSlider = new Swiper(testimonials__mobile, {
+            slidesPerView: 1.2,
+            spaceBetween: 20,
+            centeredSlides: true,
+            pagination: {
+                el: ".swiper-pagination",
+            },
+            breakpoints: {
+                768: {
+                    slidesPerView: 2.1,
+                    centeredSlides: false
+                }
+            }
+        });
+    }
+
+    /* Projects */
+
+    window.initProjectsSliders = function() {
+        let projectItems = document.querySelectorAll(".projects__item");
+
+        for (let i = 0; i < projectItems.length; i++) {
+
+            let swiperContainer = projectItems[i].getElementsByClassName("projects__item-images")[0];
+
+            if (swiperContainer) {
+                new Swiper(swiperContainer, {
+                    slidesPerView: 1,
+                    spaceBetween: 10,
+                    loop: true,
+                    navigation: {
+                        nextEl: '.swiper-button-next',
+                        prevEl: '.swiper-button-prev',
+                    },
+                });
             }
         }
-    });
+    }
+
 });

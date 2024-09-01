@@ -1,0 +1,73 @@
+@use '../abstracts/colours' as *;
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.modal {
+  &-dialog {
+    position: relative;
+    --bs-modal-width: calc(100vw - 40px);
+    margin-right: 20px;
+  }
+
+  &-header{
+    position: absolute;
+    top: toRem(10);
+    right: toRem(20);
+    z-index: 99;
+    cursor: pointer;
+    padding: 0;
+    border: none;
+  }
+
+  .btn-close{
+    &:focus{
+      box-shadow: none;
+
+    }
+  }
+
+  &-content{
+    padding: toRem(32) toRem(20);
+  }
+
+  @include breakpoint(md){
+    &-content{
+      padding: toRem(64) toRem(20);
+    }
+
+    &-header{
+      top: toRem(20);
+      right: toRem(20);
+    }
+  }
+
+  @include breakpoint(lg){
+    &-content{
+      padding: toRem(60) toRem(40);
+    }
+    &-header{
+      top: toRem(32);
+      right: toRem(40);
+    }
+  }
+
+  @include breakpoint(xl){
+    &-dialog{
+      --bs-modal-width: 1200px;
+      margin-right: 2%;
+    }
+    &-content{
+      padding: toRem(60) toRem(60);
+    }
+
+    &-header{
+      top: toRem(48);
+      right: toRem(60);
+    }
+  }
+  @include breakpoint(4k){
+    &-dialog{
+      --bs-modal-width: 1600px;
+    }
+  }
+}

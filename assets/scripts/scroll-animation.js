@@ -1,26 +1,5 @@
 gsap.registerPlugin(ScrollTrigger);
 document.addEventListener("DOMContentLoaded", function (event) {
-    /* Features Section */
-
-    const featuresBg = document.querySelector(".features-bg");
-    const featuresSection = document.querySelector(".features");
-
-    if (featuresBg && featuresSection) {
-        gsap.to(featuresBg, {
-            scrollTrigger: {
-                trigger: featuresSection,
-                start: 'top 90%',
-                end: 'top 30%',
-                scrub: 1,
-                toggleActions: "restart none none reverse"
-            },
-            'width': '100%',
-            'height': '100%',
-            'border-radius': '0 0 0 0',
-        });
-    }
-
-
     /* Text banner */
 
     const textBanner = document.querySelector(".text-banner");
@@ -113,17 +92,33 @@ document.addEventListener("DOMContentLoaded", function (event) {
         }
     }
 
-    if (window.innerWidth >= 1024) {
-        gridBlocksAnimation();
-        testimonialsAnimation();
-    }
 
-    window.addEventListener('resize', function () {
-        ScrollTrigger.refresh();
-        if (window.innerWidth >= 1024) {
+    ScrollTrigger.matchMedia({
+        "(min-width: 1024px)": function () {
             gridBlocksAnimation();
             testimonialsAnimation()
-        }
+        },
+        all: function () {
+            /* Features Section */
+
+            const featuresBg = document.querySelector(".features-bg");
+            const featuresSection = document.querySelector(".features");
+
+            if (featuresBg && featuresSection) {
+                gsap.to(featuresBg, {
+                    scrollTrigger: {
+                        trigger: featuresSection,
+                        start: 'top 90%',
+                        end: 'top 30%',
+                        scrub: 1,
+                        toggleActions: "restart none none reverse"
+                    },
+                    'width': '100%',
+                    'height': '100%',
+                    'border-radius': '0 0 0 0',
+                });
+            }
+        },
     });
 });
 

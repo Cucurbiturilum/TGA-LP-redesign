@@ -1,0 +1,151 @@
+@use '../abstracts/colours' as *;
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.team {
+  display: flex;
+  flex-direction: column;
+  row-gap: toRem(48);
+
+  &-wrapper {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: toRem(24);
+  }
+
+  &-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: toRem(10);
+
+    &__front {
+      height: 100%;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
+
+      .circle-icon {
+        display: block;
+        width: toRem(32);
+        height: toRem(32);
+        background: url("data:image/svg+xml,%3Csvg width='33' height='33' viewBox='0 0 33 33' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='0.333984' y='0.382812' width='32' height='32' rx='16' fill='%2302C700'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M16 7.38281C16.4142 7.38281 16.75 7.7186 16.75 8.13281V15.6328H24.25C24.6642 15.6328 25 15.9686 25 16.3828C25 16.797 24.6642 17.1328 24.25 17.1328H16.75V24.6328C16.75 25.047 16.4142 25.3828 16 25.3828C15.5858 25.3828 15.25 25.047 15.25 24.6328V17.1328H7.75C7.33579 17.1328 7 16.797 7 16.3828C7 15.9686 7.33579 15.6328 7.75 15.6328H15.25V8.13281C15.25 7.7186 15.5858 7.38281 16 7.38281Z' fill='white'/%3E%3C/svg%3E%0A") center no-repeat;
+        background-size: cover;
+        position: absolute;
+        top: toRem(20);
+        right: toRem(20);
+        transition: $primary-animation;
+      }
+
+      &__name {
+        color: $dark-primary;
+        font-size: toRem(20);
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        background: $white;
+        padding: toRem(12) toRem(24);
+        transition: $primary-animation;
+        border-radius: 0 toRem(10) 0 toRem(10);
+
+        &:before{
+          content: '';
+          width: toRem(16);
+          height: toRem(16);
+          background-color: $white;
+          display: block;
+          top: 0;
+          left: 0;
+          position: absolute;
+          transform: translateY(-100%);
+          mask-composite: exclude;
+          mask-size: cover;
+          mask-image: url("data:image/svg+xml,%3Csvg width='64' height='59' viewBox='0 0 64 59' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M56.5368 59C65.0751 59 67.7863 59 56.5909 59C56.5729 59 56.5549 59 56.5368 59C39.6564 59 0 59 0 59V0.925488C0 29.9455 23.237 58.9686 56.5368 59Z' fill='white'/%3E%3C/svg%3E%0A");
+        }
+
+        &:after{
+          content: '';
+          width: toRem(16);
+          height: toRem(16);
+          background-color: $white;
+          display: block;
+          bottom: 0;
+          right: 0;
+          position: absolute;
+          transform: translateX(100%);
+          mask-composite: exclude;
+          mask-size: cover;
+          mask-image: url("data:image/svg+xml,%3Csvg width='64' height='59' viewBox='0 0 64 59' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M56.5368 59C65.0751 59 67.7863 59 56.5909 59C56.5729 59 56.5549 59 56.5368 59C39.6564 59 0 59 0 59V0.925488C0 29.9455 23.237 58.9686 56.5368 59Z' fill='white'/%3E%3C/svg%3E%0A");
+        }
+      }
+    }
+
+    &__back {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background-color: $black-75;
+      opacity: 0;
+      border-radius: 0 toRem(10) 0 toRem(10);
+      padding: toRem(30) toRem(24);
+      transform: scale(0);
+      overflow: hidden;
+      transform-origin: bottom left;
+      transition: $primary-animation;
+
+      &__name {
+        color: $white;
+        font-size: toRem(20);
+      }
+    }
+
+    &__position, &__description {
+      color: $gray-75;
+      font-size: toRem(14);
+      font-weight: 300;
+    }
+
+    &__position {
+      margin: toRem(10) 0 toRem(24);
+    }
+
+    &:hover, &:active {
+      .team-card__back {
+        transform: scale(1);
+        opacity: 1;
+      }
+
+      .team-card__front__name{
+        opacity: 0;
+      }
+
+      .circle-icon {
+        transform: rotate(45deg);
+      }
+    }
+  }
+
+  @include breakpoint(md) {
+    &-wrapper {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    &-card {
+      height: toRem(400);
+    }
+  }
+
+
+  @include breakpoint(lg) {
+    &-wrapper {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+}

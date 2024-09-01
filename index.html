@@ -18,7 +18,10 @@
             rel="stylesheet"
             href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
-    <link rel="stylesheet" href="assets/styles/main.css">
+    <link rel="stylesheet" href="./assets/styles/chocolat.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="./assets/styles/main.css">
+    <script type="text/javascript" src="/assets/scripts/chocolat.js"></script>
+    <script src="assets/scripts/swiper.js"></script>
 </head>
 <body>
 <header class="header-main">
@@ -26,16 +29,16 @@
         <img src="./assets/images/logo.png" alt="logo" class="header-main__logo">
     </a>
     <nav class="header-main__nav">
-        <a href="#about" class="header-main__nav-item">Про нас</a>
-        <a href="#" class="header-main__nav-item">Проекти</a>
-        <a href="#" class="header-main__nav-item">навчальні програми</a>
-        <a href="#" class="header-main__nav-item">вартість навчання</a>
-        <a href="#" class="header-main__nav-item">Менторство</a>
-        <a href="#" class="header-main__nav-item">команда професіоналів</a>
-        <a href="#" class="header-main__nav-item">Гуртки</a>
-        <a href="#" class="header-main__nav-item">вакансії</a>
-        <a href="#" class="header-main__nav-item">наші школи</a>
-        <a href="#" class="header-main__nav-item">галерея</a>
+        <a href="javascript:" class="header-main__nav-item" onclick="scrollToSection('#about')">Про нас</a>
+        <a href="modals/projects.html" class="header-main__nav-item modal-button">Проекти</a>
+        <a href="modals/educational-programs.html" class="header-main__nav-item modal-button">навчальні програми</a>
+        <a href="javascript:" class="header-main__nav-item" onclick="scrollToSection('#price')">вартість навчання</a>
+        <a href="modals/mentorship.html" class="header-main__nav-item modal-button">Менторство</a>
+        <a href="modals/team.html" class="header-main__nav-item modal-button">команда професіоналів</a>
+        <a href="modals/groups.html" class="header-main__nav-item modal-button">Гуртки</a>
+        <a href="modals/job.html" class="header-main__nav-item modal-button">вакансії</a>
+        <a href="javascript:" class="header-main__nav-item" onclick="scrollToSection('#schools')">наші школи</a>
+        <a href="modals/gallery.html" class="header-main__nav-item modal-button">галерея</a>
         <a href="https://drive.google.com/drive/folders/15WvncggUFTtRcPvKx0xXSTb_zdXUoYwB" class="header-main__nav-item"
            target="_blank">Ліцензія</a>
     </nav>
@@ -53,42 +56,52 @@
                 <span class="button-primary__text">Записатися</span>
             </a>
         </div>
-        <div class="col-12 col-lg-6 col-xl-5 col-hd-7 offset-xl-1 position-relative">
+        <div class="col-12 col-lg-6 col-xl-6 col-hd-7 offset-xl-1 position-relative">
             <div class="hero-slider">
                 <div class="hero-slider-top swiper">
                     <div class="swiper-wrapper">
                         <div class="hero-slider__item swiper-slide swiper-slide">
                             <img
-                                    src="assets/images/hero-slider/top/IMG_9567.jpg" alt="hero school"/>
+                                    src="./assets/images/hero-slider/top/IMG_9567.jpg" alt="hero school"
+                                    loading="lazy"/>
                         </div>
                         <div class="hero-slider__item swiper-slide">
                             <div class="hero-slider__columns">
-                                <img src="./assets/images/hero-slider/top/IMG_1735_jpg.webp" alt="hero school">
-                                <img src="./assets/images/hero-slider/top/IMG_4709.webp" alt="hero school">
-                                <img src="./assets/images/hero-slider/top/IMG_9878.webp" alt="hero school">
+                                <img src="././assets/images/hero-slider/top/IMG_1735_jpg.webp" alt="hero school"
+                                     loading="lazy">
+                                <img src="././assets/images/hero-slider/top/IMG_4709.webp" alt="hero school"
+                                     loading="lazy">
+                                <img src="././assets/images/hero-slider/top/IMG_9878.webp" alt="hero school"
+                                     loading="lazy">
                             </div>
                         </div>
                         <div class="hero-slider__item swiper-slide">
-                            <img src="./assets/images/hero-slider/top/IMG_1501.webp" alt="hero school">
+                            <img src="./assets/images/hero-slider/top/IMG_1501.webp" alt="hero school" loading="lazy">
                         </div>
                         <div class="hero-slider__item swiper-slide">
                             <div class="hero-slider__columns">
-                                <img src="./assets/images/hero-slider/top/IMG_7478.webp" alt="hero school">
-                                <img src="./assets/images/hero-slider/top/IMG_9107.webp" alt="hero school">
-                                <img src="./assets/images/hero-slider/top/IMG_2067.webp" alt="hero school">
+                                <img src="./assets/images/hero-slider/top/IMG_7478.webp" alt="hero school"
+                                     loading="lazy">
+                                <img src="./assets/images/hero-slider/top/IMG_9107.webp" alt="hero school"
+                                     loading="lazy">
+                                <img src="./assets/images/hero-slider/top/IMG_2067.webp" alt="hero school"
+                                     loading="lazy">
                             </div>
                         </div>
                         <div class="hero-slider__item swiper-slide">
-                            <img src="./assets/images/hero-slider/top/IMG_9565.webp" alt="hero school">
+                            <img src="./assets/images/hero-slider/top/IMG_9565.webp" alt="hero school" loading="lazy">
                         </div>
                         <div class="hero-slider__item swiper-slide">
-                            <img src="./assets/images/hero-slider/top/IMG_2393.webp" alt="hero school">
+                            <img src="./assets/images/hero-slider/top/IMG_2393.webp" alt="hero school" loading="lazy">
                         </div>
                         <div class="hero-slider__item swiper-slide">
                             <div class="hero-slider__columns">
-                                <img src="./assets/images/hero-slider/top/IMG_4461.webp" alt="hero school">
-                                <img src="./assets/images/hero-slider/top/IMG_9576.webp" alt="hero school">
-                                <img src="./assets/images/hero-slider/top/IMG_5424.webp" alt="hero school">
+                                <img src="./assets/images/hero-slider/top/IMG_4461.webp" alt="hero school"
+                                     loading="lazy">
+                                <img src="./assets/images/hero-slider/top/IMG_9576.webp" alt="hero school"
+                                     loading="lazy">
+                                <img src="./assets/images/hero-slider/top/IMG_5424.webp" alt="hero school"
+                                     loading="lazy">
                             </div>
                         </div>
                     </div>
@@ -97,36 +110,46 @@
                     <div class="swiper-wrapper">
                         <div class="hero-slider__item swiper-slide swiper-slide">
                             <img
-                                    src="assets/images/hero-slider/top/IMG_9567.jpg" alt="hero school"/>
+                                    src="./assets/images/hero-slider/top/IMG_9567.jpg" alt="hero school"
+                                    loading="lazy"/>
                         </div>
                         <div class="hero-slider__item swiper-slide">
                             <div class="hero-slider__columns">
-                                <img src="./assets/images/hero-slider/top/IMG_1735_jpg.webp" alt="hero school">
-                                <img src="./assets/images/hero-slider/top/IMG_4709.webp" alt="hero school">
-                                <img src="./assets/images/hero-slider/top/IMG_9878.webp" alt="hero school">
+                                <img src="./assets/images/hero-slider/top/IMG_1735_jpg.webp" alt="hero school"
+                                     loading="lazy">
+                                <img src="./assets/images/hero-slider/top/IMG_4709.webp" alt="hero school"
+                                     loading="lazy">
+                                <img src="./assets/images/hero-slider/top/IMG_9878.webp" alt="hero school"
+                                     loading="lazy">
                             </div>
                         </div>
                         <div class="hero-slider__item swiper-slide">
-                            <img src="./assets/images/hero-slider/top/IMG_1501.webp" alt="hero school">
+                            <img src="./assets/images/hero-slider/top/IMG_1501.webp" alt="hero school" loading="lazy">
                         </div>
                         <div class="hero-slider__item swiper-slide">
                             <div class="hero-slider__columns">
-                                <img src="./assets/images/hero-slider/top/IMG_7478.webp" alt="hero school">
-                                <img src="./assets/images/hero-slider/top/IMG_9107.webp" alt="hero school">
-                                <img src="./assets/images/hero-slider/top/IMG_2067.webp" alt="hero school">
+                                <img src="./assets/images/hero-slider/top/IMG_7478.webp" alt="hero school"
+                                     loading="lazy">
+                                <img src="./assets/images/hero-slider/top/IMG_9107.webp" alt="hero school"
+                                     loading="lazy">
+                                <img src="./assets/images/hero-slider/top/IMG_2067.webp" alt="hero school"
+                                     loading="lazy">
                             </div>
                         </div>
                         <div class="hero-slider__item swiper-slide">
-                            <img src="./assets/images/hero-slider/top/IMG_9565.webp" alt="hero school">
+                            <img src="./assets/images/hero-slider/top/IMG_9565.webp" alt="hero school" loading="lazy">
                         </div>
                         <div class="hero-slider__item swiper-slide">
-                            <img src="./assets/images/hero-slider/top/IMG_2393.webp" alt="hero school">
+                            <img src="./assets/images/hero-slider/top/IMG_2393.webp" alt="hero school" loading="lazy">
                         </div>
                         <div class="hero-slider__item swiper-slide">
                             <div class="hero-slider__columns">
-                                <img src="./assets/images/hero-slider/top/IMG_4461.webp" alt="hero school">
-                                <img src="./assets/images/hero-slider/top/IMG_9576.webp" alt="hero school">
-                                <img src="./assets/images/hero-slider/top/IMG_5424.webp" alt="hero school">
+                                <img src="./assets/images/hero-slider/top/IMG_4461.webp" alt="hero school"
+                                     loading="lazy">
+                                <img src="./assets/images/hero-slider/top/IMG_9576.webp" alt="hero school"
+                                     loading="lazy">
+                                <img src="./assets/images/hero-slider/top/IMG_5424.webp" alt="hero school"
+                                     loading="lazy">
                             </div>
                         </div>
                     </div>
@@ -135,7 +158,7 @@
         </div>
     </div>
 </section>
-<section id="about" class="features">
+<section class="features">
     <div class="features-bg"></div>
     <div class="container">
         <div class="wrapper grid">
@@ -175,7 +198,7 @@
                     в Ірпені
                 </p>
             </div>
-            <div class="features__item">
+            <div class="features__item" id="about">
                 <h3 class="h3">
                     Наша місія
                 </h3>
@@ -184,20 +207,22 @@
                     пізнати себе.
                 </p>
                 <p class="text-base">
-                    Наша мета — підтримати розвиток індивідуальних здібностей та навчити співпраці, щоб кожен міг вносити
+                    Наша мета — підтримати розвиток індивідуальних здібностей та навчити співпраці, щоб кожен міг
+                    вносити
                     свій внесок у спільне благо.
                 </p>
                 <p class="text-base">
                     Разом ми будемо працювати над покращенням життя в Україні та в усьому світі!
                 </p>
-                <div class="plus-icon"></div>
+                <a href="modals/mission.html" class="plus-icon modal-button"></a>
             </div>
             <div class="features__item">
                 <h3 class="h3">
                     Чому ми?
                 </h3>
                 <ul class="features__item__list">
-                    <li class="text-base">персональні плани розвитку кожного учня (академічний блок та особистісний)</li>
+                    <li class="text-base">персональні плани розвитку кожного учня (академічний блок та особистісний)
+                    </li>
                     <li class="text-base">система наставництва, де кожна дитина має свого ментора, який веде її до
                         індивідуальних цілей
                     </li>
@@ -208,22 +233,23 @@
                     <li class="text-base">міжнародні поїздки</li>
                     <li class="text-base">співпраця із кращими університетами України</li>
                 </ul>
-                <div class="plus-icon"></div>
             </div>
             <div class="features__item">
                 <h3 class="h3 text-white ">
                     Візія школи
                 </h3>
                 <p class="text-white text-base">
-                    Розкриття потенціалу та здібностей дитини через формування унікального досвіду: створення середовища, де
+                    Розкриття потенціалу та здібностей дитини через формування унікального досвіду: створення
+                    середовища, де
                     спільнота забезпечує можливості для якісних локальних та глобальних змін, доступних "на відстані
                     витягнутої руки" кожного учасника.
                 </p>
                 <p class="text-white text-base">
-                    Занурення у різні середовища поза школою сприяє глибшому пізнанню світу. Розвиток здатності реагувати та
+                    Занурення у різні середовища поза школою сприяє глибшому пізнанню світу. Розвиток здатності
+                    реагувати та
                     діяти найкращим чином у умовах невизначеності.
                 </p>
-                <div class="plus-icon"></div>
+                <a href="modals/vision.html" class="plus-icon modal-button"></a>
             </div>
             <div class="features__item d-flex flex-column justify-content-center align-items-center">
                 <h3 class="h3 text-white text-center">
@@ -255,22 +281,22 @@
             <div class="blocks-grid__item"></div>
             <div class="blocks-grid__item">
                 <h2 class="blocks-grid__item-title">Шкільні<br> проєкти</h2>
-                <div class="plus-icon"></div>
+                <a href="modals/projects.html" class="plus-icon modal-button"></a>
             </div>
             <div class="blocks-grid__item">
                 <h2 class="blocks-grid__item-title">Система<br> менторства</h2>
-                <div class="plus-icon"></div>
+                <a href="modals/mentorship.html" class="plus-icon modal-button"></a>
             </div>
             <div class="blocks-grid__item"></div>
             <div class="blocks-grid__item" id="main-image"></div>
             <div class="blocks-grid__item">
                 <h2 class="blocks-grid__item-title">Різноманітні<br> гуртки</h2>
-                <div class="plus-icon"></div>
+                <a href="modals/groups.html" class="plus-icon modal-button"></a>
             </div>
             <div class="blocks-grid__item"></div>
             <div class="blocks-grid__item">
                 <h2 class="blocks-grid__item-title">Програми<br> навчання</h2>
-                <div class="plus-icon"></div>
+                <a href="modals/educational-programs.html" class="plus-icon modal-button"></a>
             </div>
             <div class="blocks-grid__item"></div>
         </div>
@@ -282,7 +308,7 @@
 </section>
 <section class="price">
     <div class="container">
-        <h2 class="h2 text-white text-center">Вартість навчання</h2>
+        <h2 id="price" class="h2 text-white text-center">Вартість навчання</h2>
         <div class="price-boxes swiper">
             <div class="swiper-wrapper">
                 <div class="swiper-slide price__item">
@@ -372,13 +398,16 @@
                               stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
                         <path d="M19.981 70.4131V74.8786C19.981 81.0679 24.9963 86.0833 31.1856 86.0833H34.2246"
                               stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M27.2625 86.3137V88.5354C27.2625 92.0276 30.0934 94.8511 33.5782 94.8511" stroke="white"
+                        <path d="M27.2625 86.3137V88.5354C27.2625 92.0276 30.0934 94.8511 33.5782 94.8511"
+                              stroke="white"
                               stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
                         <path d="M33.5782 7.80647V2.0481" stroke="white" stroke-width="3" stroke-linecap="round"
                               stroke-linejoin="round"/>
-                        <path d="M22.9828 9.90186L21.0212 4.49268" stroke="white" stroke-width="3" stroke-linecap="round"
+                        <path d="M22.9828 9.90186L21.0212 4.49268" stroke="white" stroke-width="3"
+                              stroke-linecap="round"
                               stroke-linejoin="round"/>
-                        <path d="M13.7471 15.4894L10.0543 11.0833" stroke="white" stroke-width="3" stroke-linecap="round"
+                        <path d="M13.7471 15.4894L10.0543 11.0833" stroke="white" stroke-width="3"
+                              stroke-linecap="round"
                               stroke-linejoin="round"/>
                         <path d="M6.98566 23.9077L2 21.0322" stroke="white" stroke-width="3" stroke-linecap="round"
                               stroke-linejoin="round"/>
@@ -394,7 +423,8 @@
                 <div class="flex-grow-1 d-lg-flex gap-lg-4 justify-content-between">
                     <div>
                         <p class="text-md mb-3">
-                            Для талановитих дітей для <span class="text-orange">5-10 класів</span> діє стипендійна програма,
+                            Для талановитих дітей для <span class="text-orange">5-10 класів</span> діє стипендійна
+                            програма,
                             де можна отримати знижку на навчання
                             до <span class="text-orange">40%</span>.
                         </p>
@@ -428,7 +458,8 @@
                                   stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                             <path d="M75.1944 43.0818C76.438 43.8004 76.438 45.6002 75.1944 46.3189L43.3676 64.6975C40.4618 66.3722 39.0933 68.1533 39.0933 71.0591C39.0933 73.9649 41.5867 76.2396 44.4863 74.5648L51.7978 70.3966V77.5831L58.1969 73.7524V66.6472C58.1969 65.0037 57.3157 63.4914 55.8909 62.679"
                                   stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M6.29102 22.991L35.0682 38.9575" stroke="white" stroke-width="2" stroke-linecap="round"
+                            <path d="M6.29102 22.991L35.0682 38.9575" stroke="white" stroke-width="2"
+                                  stroke-linecap="round"
                                   stroke-linejoin="round"/>
                             <path d="M75.5688 30.1399L72.7192 31.7834L74.0128 32.5208L75.5688 30.1399Z" stroke="white"
                                   stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -470,7 +501,8 @@
                 </div>
                 <div class="card__item">
                     <svg width="80" height="82" viewBox="0 0 80 82" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M7.00586 81V68.0073C7.00586 66.1394 8.52114 64.624 10.389 64.624H29.6667" stroke="white"
+                        <path d="M7.00586 81V68.0073C7.00586 66.1394 8.52114 64.624 10.389 64.624H29.6667"
+                              stroke="white"
                               stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         <path d="M29.6606 64.624V51.6314C29.6606 49.7636 31.1762 48.2482 33.0441 48.2482H52.3215"
                               stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -577,15 +609,19 @@
                               stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         <path d="M44.0278 10.4997V7.05212" stroke="white" stroke-width="2" stroke-linecap="round"
                               stroke-linejoin="round"/>
-                        <path d="M37.6842 11.7517L36.5093 8.51184" stroke="white" stroke-width="2" stroke-linecap="round"
+                        <path d="M37.6842 11.7517L36.5093 8.51184" stroke="white" stroke-width="2"
+                              stroke-linecap="round"
                               stroke-linejoin="round"/>
-                        <path d="M32.1538 15.1043L29.9404 12.4637" stroke="white" stroke-width="2" stroke-linecap="round"
+                        <path d="M32.1538 15.1043L29.9404 12.4637" stroke="white" stroke-width="2"
+                              stroke-linecap="round"
                               stroke-linejoin="round"/>
                         <path d="M28.101 20.1421L25.1162 18.4154" stroke="white" stroke-width="2" stroke-linecap="round"
                               stroke-linejoin="round"/>
-                        <path d="M50.3711 11.7517L51.5519 8.51184" stroke="white" stroke-width="2" stroke-linecap="round"
+                        <path d="M50.3711 11.7517L51.5519 8.51184" stroke="white" stroke-width="2"
+                              stroke-linecap="round"
                               stroke-linejoin="round"/>
-                        <path d="M55.9072 15.1043L58.1206 12.4637" stroke="white" stroke-width="2" stroke-linecap="round"
+                        <path d="M55.9072 15.1043L58.1206 12.4637" stroke="white" stroke-width="2"
+                              stroke-linecap="round"
                               stroke-linejoin="round"/>
                         <path d="M59.96 20.1421L62.9388 18.4154" stroke="white" stroke-width="2" stroke-linecap="round"
                               stroke-linejoin="round"/>
@@ -629,9 +665,11 @@
                     <svg width="81" height="82" viewBox="0 0 81 82" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M40.1323 7.91445V1" stroke="white" stroke-width="2" stroke-linecap="round"
                               stroke-linejoin="round"/>
-                        <path d="M30.6679 9.58542L28.1255 2.59888" stroke="white" stroke-width="2" stroke-linecap="round"
+                        <path d="M30.6679 9.58542L28.1255 2.59888" stroke="white" stroke-width="2"
+                              stroke-linecap="round"
                               stroke-linejoin="round"/>
-                        <path d="M21.8013 13.8566L17.1484 8.31055" stroke="white" stroke-width="2" stroke-linecap="round"
+                        <path d="M21.8013 13.8566L17.1484 8.31055" stroke="white" stroke-width="2"
+                              stroke-linecap="round"
                               stroke-linejoin="round"/>
                         <path d="M16.14 19.7557L9.55664 15.9526" stroke="white" stroke-width="2" stroke-linecap="round"
                               stroke-linejoin="round"/>
@@ -639,7 +677,8 @@
                               stroke-linejoin="round"/>
                         <path d="M59.0391 14.469L63.5478 9.08862" stroke="white" stroke-width="2" stroke-linecap="round"
                               stroke-linejoin="round"/>
-                        <path d="M49.6035 10.1258L52.1315 3.17529" stroke="white" stroke-width="2" stroke-linecap="round"
+                        <path d="M49.6035 10.1258L52.1315 3.17529" stroke="white" stroke-width="2"
+                              stroke-linecap="round"
                               stroke-linejoin="round"/>
                         <path d="M48.6743 56.8638L53.3346 60.6955C54.7607 61.8623 55.5816 63.6126 55.5816 65.4565V80.9999"
                               stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -670,7 +709,7 @@
                 </div>
             </div>
             <div class="text-center">
-                <a href="https://docs.google.com/forms/d/e/1FAIpQLSf1TreJNiwFxE1N_sRda-Odtvu6QUwNKlFoihynjOu2oiQFRA/viewform"
+                <a href="#"
                    target="_blank"
                    class="button-primary white-outline flex-shrink-0 align-self-center">
                     <span class="button-primary__icon"></span>
@@ -688,7 +727,8 @@
                 <div class="swiper-wrapper">
                     <div class="testimonials__box blue swiper-slide">
                         <p class="testimonials__item-text text-sm">
-                            Чудовий колектив компетентних вчителів. Особливо хочу подякувати куратору 2 класу пані Аліні за
+                            Чудовий колектив компетентних вчителів. Особливо хочу подякувати куратору 2 класу пані Аліні
+                            за
                             щасливі шкільні моменти наших діток, втілення в життя неймовірних ідей, підтримка куратором
                             класу
                             індивідуальності кожного учня; навчальна програма; дуже круті та інформативні уроки computer
@@ -713,22 +753,26 @@
                     </div>
                     <div class="testimonials__box green swiper-slide">
                         <p class="testimonials__item-text text-sm">
-                            Система менторства - я вважаю, що це дуже важливо мати ментора, який допомагає тобі, який знає
+                            Система менторства - я вважаю, що це дуже важливо мати ментора, який допомагає тобі, який
+                            знає
                             де
-                            потрібно підсилити увагу до дитини, де змотивувати, де разом з батьками обговорити та спільно
+                            потрібно підсилити увагу до дитини, де змотивувати, де разом з батьками обговорити та
+                            спільно
                             рухатись в одному напрямку. Це дуже цінно.
                         </p>
                     </div>
                     <div class="testimonials__box gray swiper-slide">
                         <p class="testimonials__item-text text-sm">
-                            На мій погляд найбільш цінним є налагодження навчального процесу, Вероніка завжди з радістю йде
+                            На мій погляд найбільш цінним є налагодження навчального процесу, Вероніка завжди з радістю
+                            йде
                             до школи, її навчили любити школу, любити вчитися, а це головне)
                         </p>
                     </div>
                     <div class="swiper-slide justify-content-between d-flex gap-2 flex-column">
                         <div class="testimonials__box green">
                             <p class="testimonials__item-text text-sm">
-                                Найбільш цінним є те, що сформоване школою :) шалене бажання дитини йти щоранку в школу - 
+                                Найбільш цінним є те, що сформоване школою :) шалене бажання дитини йти щоранку в школу
+                                - 
                                 це є
                                 показником!
                             </p>
@@ -743,17 +787,22 @@
                     </div>
                     <div class="testimonials__box orange swiper-slide">
                         <p class="testimonials__item-text text-sm">
-                            Я задоволена школою TGI Academy, в ній працюють не просто професіонали, а ще й люди які люблять
-                            свою справу, люблять дітей, постійно самовдосконалюються і надихають дітей своїм прикладом. Дуже
-                            вдячна очільниці школи, Валентині, яка в часи війни змогла втриматись і продовжити справу свого
+                            Я задоволена школою TGI Academy, в ній працюють не просто професіонали, а ще й люди які
+                            люблять
+                            свою справу, люблять дітей, постійно самовдосконалюються і надихають дітей своїм прикладом.
+                            Дуже
+                            вдячна очільниці школи, Валентині, яка в часи війни змогла втриматись і продовжити справу
+                            свого
                             життя, втримати найкращих вчителів у своєму колективі.
                         </p>
                     </div>
                     <div class="testimonials__box pink swiper-slide">
                         <p class="testimonials__item-text text-sm">
-                            В цій школі панує повага один до одного, це стосується як вчителів, так і батьків та дітей. Всі
+                            В цій школі панує повага один до одного, це стосується як вчителів, так і батьків та дітей.
+                            Всі
                             процеси організовані дуже ефективно, комунікації чіткі та зрозумілі. Школа дійсно сучасна,
-                            вчителі всі професіонали своєї справи. А ще, школа гідно пережила початок воєнних дій, робила і
+                            вчителі всі професіонали своєї справи. А ще, школа гідно пережила початок воєнних дій,
+                            робила і
                             робить все для підтримки колективу, родин, та дітей! Величезна за це подяка!
                         </p>
                     </div>
@@ -773,7 +822,8 @@
                     <div class="testimonials__box green swiper-slide">
                         <p class="testimonials__item-text text-sm">
                             Це круто, коли викладачі на одній хвилі з батьками, коли твою дитину оточують люди, яким
-                            довіряєш безмежно, коли завжди маєш зворотній зв'язок, можеш звернутися з будь-яким питанням і
+                            довіряєш безмежно, коли завжди маєш зворотній зв'язок, можеш звернутися з будь-яким питанням
+                            і
                             воно буде вирішене. Школа має чудову команду, кращої важко уявити.
                         </p>
                     </div>
@@ -784,7 +834,8 @@
                 <div class="testimonials__item">
                     <div class="testimonials__box blue">
                         <p class="testimonials__item-text text-sm">
-                            Чудовий колектив компетентних вчителів. Особливо хочу подякувати куратору 2 класу пані Аліні за
+                            Чудовий колектив компетентних вчителів. Особливо хочу подякувати куратору 2 класу пані Аліні
+                            за
                             щасливі шкільні моменти наших діток, втілення в життя неймовірних ідей, підтримка куратором
                             класу
                             індивідуальності кожного учня; навчальна програма; дуже круті та інформативні уроки computer
@@ -809,9 +860,11 @@
                     <div class="testimonials__box"></div>
                     <div class="testimonials__box green">
                         <p class="testimonials__item-text text-sm">
-                            Система менторства - я вважаю, що це дуже важливо мати ментора, який допомагає тобі, який знає
+                            Система менторства - я вважаю, що це дуже важливо мати ментора, який допомагає тобі, який
+                            знає
                             де
-                            потрібно підсилити увагу до дитини, де змотивувати, де разом з батьками обговорити та спільно
+                            потрібно підсилити увагу до дитини, де змотивувати, де разом з батьками обговорити та
+                            спільно
                             рухатись в одному напрямку. Це дуже цінно.
                         </p>
                     </div>
@@ -819,29 +872,35 @@
                 <div class="testimonials__item">
                     <div class="testimonials__box blue">
                         <p class="testimonials__item-text text-sm">
-                            На мій погляд найбільш цінним є налагодження навчального процесу, Вероніка завжди з радістю йде
+                            На мій погляд найбільш цінним є налагодження навчального процесу, Вероніка завжди з радістю
+                            йде
                             до школи, її навчили любити школу, любити вчитися, а це головне)
                         </p>
                     </div>
                     <div class="testimonials__box"></div>
                     <div class="testimonials__box orange">
                         <p class="testimonials__item-text text-sm">
-                            Найбільш цінним є те, що сформоване школою :) шалене бажання дитини йти щоранку в школу - це є
+                            Найбільш цінним є те, що сформоване школою :) шалене бажання дитини йти щоранку в школу - це
+                            є
                             показником!
                         </p>
                     </div>
                     <div class="testimonials__box pink">
                         <p class="testimonials__item-text text-sm">
-                            Любимо вас, нікуди від вас добровільно не підемо, ви найкращі, а також постійно чимось приємно
+                            Любимо вас, нікуди від вас добровільно не підемо, ви найкращі, а також постійно чимось
+                            приємно
                             дивуєте 💜
                         </p>
                     </div>
                     <div class="testimonials__box"></div>
                     <div class="testimonials__box green">
                         <p class="testimonials__item-text text-sm">
-                            Я задоволена школою TGI Academy, в ній працюють не просто професіонали, а ще й люди які люблять
-                            свою справу, люблять дітей, постійно самовдосконалюються і надихають дітей своїм прикладом. Дуже
-                            вдячна очільниці школи, Валентині, яка в часи війни змогла втриматись і продовжити справу свого
+                            Я задоволена школою TGI Academy, в ній працюють не просто професіонали, а ще й люди які
+                            люблять
+                            свою справу, люблять дітей, постійно самовдосконалюються і надихають дітей своїм прикладом.
+                            Дуже
+                            вдячна очільниці школи, Валентині, яка в часи війни змогла втриматись і продовжити справу
+                            свого
                             життя, втримати найкращих вчителів у своєму колективі.
                         </p>
                     </div>
@@ -849,9 +908,11 @@
                 <div class="testimonials__item">
                     <div class="testimonials__box blue">
                         <p class="testimonials__item-text text-sm">
-                            В цій школі панує повага один до одного, це стосується як вчителів, так і батьків та дітей. Всі
+                            В цій школі панує повага один до одного, це стосується як вчителів, так і батьків та дітей.
+                            Всі
                             процеси організовані дуже ефективно, комунікації чіткі та зрозумілі. Школа дійсно сучасна,
-                            вчителі всі професіонали своєї справи. А ще, школа гідно пережила початок воєнних дій, робила і
+                            вчителі всі професіонали своєї справи. А ще, школа гідно пережила початок воєнних дій,
+                            робила і
                             робить все для підтримки колективу, родин, та дітей! Величезна за це подяка! </p>
                     </div>
                     <div class="testimonials__box"></div>
@@ -862,14 +923,16 @@
                     </div>
                     <div class="testimonials__box pink">
                         <p class="testimonials__item-text text-sm">
-                            Я ні на хвилину не пожалкувала, що мій син навчається саме в цій школі. Відношення до учнів дуже
+                            Я ні на хвилину не пожалкувала, що мій син навчається саме в цій школі. Відношення до учнів
+                            дуже
                             демократичне і водночас вимогливе. </p>
                     </div>
                     <div class="testimonials__box"></div>
                     <div class="testimonials__box green">
                         <p class="testimonials__item-text text-sm">
                             Це круто, коли викладачі на одній хвилі з батьками, коли твою дитину оточують люди, яким
-                            довіряєш безмежно, коли завжди маєш зворотній зв'язок, можеш звернутися з будь-яким питанням і
+                            довіряєш безмежно, коли завжди маєш зворотній зв'язок, можеш звернутися з будь-яким питанням
+                            і
                             воно буде вирішене. Школа має чудову команду, кращої важко уявити. </p>
                     </div>
                 </div>
@@ -885,7 +948,8 @@
         <div class="faq-tabs mb-5">
             <ul class="nav nav-tabs" id="faqTab" role="tablist">
                 <li class="nav-item" role="presentation">
-                    <button class="nav-link active" id="general-tab" data-bs-toggle="tab" data-bs-target="#general-tab-pane"
+                    <button class="nav-link active" id="general-tab" data-bs-toggle="tab"
+                            data-bs-target="#general-tab-pane"
                             type="button" role="tab" aria-controls="general-tab-pane" aria-selected="true">Загальні
                     </button>
                 </li>
@@ -897,14 +961,16 @@
                     </button>
                 </li>
                 <li class="nav-item" role="presentation">
-                    <button class="nav-link" id="education-tab" data-bs-toggle="tab" data-bs-target="#education-tab-pane"
+                    <button class="nav-link" id="education-tab" data-bs-toggle="tab"
+                            data-bs-target="#education-tab-pane"
                             type="button" role="tab" aria-controls="education-tab-pane" aria-selected="false">навчальний
                         процес
                     </button>
                 </li>
             </ul>
             <div class="tab-content" id="faqTabContent">
-                <div class="tab-pane fade show active" id="general-tab-pane" role="tabpanel" aria-labelledby="general-tab"
+                <div class="tab-pane fade show active" id="general-tab-pane" role="tabpanel"
+                     aria-labelledby="general-tab"
                      tabindex="0">
                     <div class="accordion accordion-flush" id="accordionGeneralFaq">
                         <div class="accordion-item">
@@ -982,7 +1048,8 @@
                                  data-bs-parent="#accordionGeneralFaq">
                                 <div class="accordion-body">
                                     <p class="text-base">
-                                        Для цього ми пропонуємо пройти вступне тестування із нашим психологом, яка надасть
+                                        Для цього ми пропонуємо пройти вступне тестування із нашим психологом, яка
+                                        надасть
                                         вам
                                         найкращі рекомендації щодо готовності дитини до школи. Вступне тестування є
                                         <b>безкоштовним</b>.
@@ -1009,7 +1076,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="tab-pane fade" id="organizational-tab-pane" role="tabpanel" aria-labelledby="organizational-tab"
+                <div class="tab-pane fade" id="organizational-tab-pane" role="tabpanel"
+                     aria-labelledby="organizational-tab"
                      tabindex="0">
                     <div class="accordion accordion-flush" id="accordionGeneralOrganizationalFaq">
                         <div class="accordion-item">
@@ -1045,7 +1113,8 @@
                                  data-bs-parent="#accordionGeneralOrganizationalFaq">
                                 <div class="accordion-body">
                                     <p class="text-base">
-                                        Наші школи працюють із 08:00 до 19:00 із понеділка по пʼятницю. Навчаємося десять
+                                        Наші школи працюють із 08:00 до 19:00 із понеділка по пʼятницю. Навчаємося
+                                        десять
                                         місяців на рік із вересня по червень включно.
                                     </p>
                                 </div>
@@ -1087,7 +1156,8 @@
                                  data-bs-parent="#accordionGeneralOrganizationalFaq">
                                 <div class="accordion-body">
                                     <p class="text-base">
-                                        Навчання у класі Preschool (0 клас) розраховане на діток 5-6 років, які вже можуть
+                                        Навчання у класі Preschool (0 клас) розраховане на діток 5-6 років, які вже
+                                        можуть
                                         закінчити старшу групу садочку або їм ще рано до першого класу (якщо садок не
                                         відвідували).
                                     </p>
@@ -1111,8 +1181,10 @@
                                  data-bs-parent="#accordionFlushExample">
                                 <div class="accordion-body">
                                     <p class="text-base">
-                                        Починаючи із 9 класу, наші учні відвідують провідні університети для розуміння умов
-                                        вступу. Ментори здійснюють профорієнтаційний супровід, якщо у дитини є такий запит
+                                        Починаючи із 9 класу, наші учні відвідують провідні університети для розуміння
+                                        умов
+                                        вступу. Ментори здійснюють профорієнтаційний супровід, якщо у дитини є такий
+                                        запит
                                         та
                                         ціль у персональному плану розвитку.
                                     </p>
@@ -1131,12 +1203,15 @@
                                  data-bs-parent="#accordionFlushExample">
                                 <div class="accordion-body">
                                     <p class="text-base">
-                                        Англійська представлена комплексним підходом, а саме 5 уроків на тиждень класичне
+                                        Англійська представлена комплексним підходом, а саме 5 уроків на тиждень
+                                        класичне
                                         вивчення мови, курс Data Science представлений англійською, іноземна мова
                                         інтегрована у
                                         проєктну діяльність, а саме захисти проєктів в залежності від класу проходять
-                                        англійською (у молодшій школі це 5-30% публічних виступів, починаючи із 8 класу всі
-                                        захисти проєктів проходять англійською). Наша ціль у вивченні англійської мови - А2
+                                        англійською (у молодшій школі це 5-30% публічних виступів, починаючи із 8 класу
+                                        всі
+                                        захисти проєктів проходять англійською). Наша ціль у вивченні англійської мови -
+                                        А2
                                         після завершення молодшої школи та В1 після завершення середньої (9 клас).
                                     </p>
                                 </div>
@@ -1154,12 +1229,14 @@
                                  data-bs-parent="#accordionFlushExample">
                                 <div class="accordion-body">
                                     <p class="text-base">
-                                        У Preschool більш полегшена навчальна програма, яка щороку адаптується під дітей.
+                                        У Preschool більш полегшена навчальна програма, яка щороку адаптується під
+                                        дітей.
                                         Також
                                         у нульовому класі діти ще не реалізують проєкти за хвилевим зануренням, а лише
                                         менторські проєкти та результативні, які повʼязані із пізнанням природи. Темп
                                         навчання
-                                        повільніший, більше ігрової діяльності із частою зміною видів роботи під час занять.
+                                        повільніший, більше ігрової діяльності із частою зміною видів роботи під час
+                                        занять.
                                         Заняття та більшість перерв тривають 30 хвилин.
                                     </p>
                                 </div>
@@ -1192,7 +1269,7 @@
                         <a href="https://maps.app.goo.gl/EtB9si9rK6cXkWkC8" target="_blank"
                            class="location text-decoration-none text-base">м. Ірпінь, вул. Донцова 50Д</a>
                     </div>
-                    <div class="plus-icon"></div>
+                    <a href="modals/primary-school.html" class="plus-icon modal-button"></a>
                 </div>
             </div>
             <div class="school-card">
@@ -1203,7 +1280,7 @@
                         <a href="https://maps.app.goo.gl/RapbgrayLYJzEpzJ6" target="_blank"
                            class="location text-decoration-none text-base">м. Ірпінь, вул. Соборна 143 (4 поверх)</a>
                     </div>
-                    <div class="plus-icon"></div>
+                    <a href="modals/middle-school.html" class="plus-icon modal-button"></a>
                 </div>
             </div>
         </div>
@@ -1275,7 +1352,7 @@
                 <p class="text-sm text-white mb-4">
                     Відмінний старт для майбутніх <br> World Changers!
                 </p>
-                <a href="/" class="button-primary white-outline green-icon">
+                <a href="№" class="button-primary white-outline green-icon">
                     <span class="button-primary__icon"></span>
                     <span class="button-primary__text">Записатися</span>
                 </a>
@@ -1283,22 +1360,22 @@
             <div class="col-6 col-md-4 col-lg-3 pt-lg-5">
                 <ul class="footer-main__nav list-unstyled mb-0">
                     <li>
-                        <a href="#about">
+                        <a href="javascript:" onclick="scrollToSection('#about')">
                             Про нас
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="modals/vision.html" class="modal-button">
                             Візія
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="modals/mission.html" class="modal-button">
                             Місія
                         </a>
                     </li>
                     <li>
-                        <a href="#schools">
+                        <a href="javascript:" onclick="scrollToSection('#schools')">
                             Наші школи
                         </a>
                     </li>
@@ -1307,17 +1384,17 @@
             <div class="col-6 col-md-4 col-lg-3 pt-lg-5">
                 <ul class="footer-main__nav list-unstyled mb-0">
                     <li>
-                        <a href="#">
+                        <a href="modals/team.html" class="modal-button">
                             Команда
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="modals/groups.html" class="modal-button">
                             Гуртки
                         </a>
                     </li>
-                    <li>
-                        <a href="#">
+                    <li class="d-none">
+                        <a href="#" class="modal-button">
                             Канікули
                         </a>
                     </li>
@@ -1326,17 +1403,17 @@
             <div class="col-12 col-md-4 col-lg-3 pt-lg-5">
                 <ul class="footer-main__nav list-unstyled mb-0">
                     <li>
-                        <a href="#">
+                        <a href="modals/educational-programs.html" class="modal-button">
                             Програми навчання
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="modals/projects.html" class="modal-button">
                             Реалізовані проекти
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="modals/mentorship.html" class="modal-button">
                             Менторство
                         </a>
                     </li>
@@ -1344,36 +1421,55 @@
             </div>
         </nav>
         <div class="footer-main__legal d-flex flex-column flex-lg-row align-items-center justify-content-between">
-                <p class="text-sm mb-4 mb-lg-0 flex-shrink-1">
-                    Ліцензія на провадження освітньої діяльності закладу освіти № 659 від 22.09.2022 <br>
-                    <a href="https://drive.google.com/drive/u/0/folders/15WvncggUFTtRcPvKx0xXSTb_zdXUoYwB" target="_blank">Прозорість та інформаційна відкритість (документи)</a>
-                </p>
-                <p class="mb-4 mb-lg-0 flex-shrink-0"> © <span id="curren-year"></span> TGI Academy</p>
-                <div class="footer-main__social">
-                    <a href="https://www.facebook.com/tgi.academy" target="_blank" class="footer-main__social__item">
-                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M16 8.0486C16 3.60314 12.418 -0.000610352 7.99949 -0.000610352C3.58095 -0.000610352 -0.000976562 3.60314 -0.000976562 8.0486C-0.000976562 12.0662 2.92468 15.3962 6.74942 16V10.3753H4.71805V8.0486H6.74942V6.27526C6.74942 4.25792 7.94383 3.14361 9.77132 3.14361C10.6466 3.14361 11.5622 3.30082 11.5622 3.30082V5.28168H10.5534C9.55951 5.28168 9.24957 5.90215 9.24957 6.53869V8.0486H11.4684L11.1137 10.3753H9.24957V16C13.0743 15.3962 16 12.0662 16 8.0486Z" fill="currentColor"/>
-                        </svg>
-                    </a>
-                    <a href="https://www.facebook.com/tgi.academy" target="_blank" class="footer-main__social__item">
-                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M8.00075 0C5.82806 0 5.55539 0.00950025 4.70205 0.048334C3.85037 0.0873344 3.26903 0.222169 2.76036 0.420004C2.23419 0.62434 1.78785 0.897676 1.34318 1.34251C0.898176 1.78719 0.62484 2.23352 0.419838 2.75953C0.221502 3.26837 0.0865008 3.84987 0.0481671 4.70122C0.01 5.55456 0 5.82739 0 8.00008C0 10.1728 0.00966692 10.4446 0.048334 11.298C0.0875011 12.1496 0.222336 12.731 0.420004 13.2396C0.624507 13.7658 0.897843 14.2121 1.34268 14.6568C1.78719 15.1018 2.23352 15.3758 2.75936 15.5802C3.26837 15.778 3.84987 15.9128 4.70138 15.9518C5.55472 15.9907 5.82723 16.0002 7.99975 16.0002C10.1726 16.0002 10.4444 15.9907 11.2978 15.9518C12.1495 15.9128 12.7315 15.778 13.2405 15.5802C13.7665 15.3758 14.2121 15.1018 14.6567 14.6568C15.1017 14.2121 15.375 13.7658 15.58 13.2398C15.7767 12.731 15.9117 12.1495 15.9517 11.2981C15.99 10.4448 16 10.1728 16 8.00008C16 5.82739 15.99 5.55472 15.9517 4.70138C15.9117 3.84971 15.7767 3.26837 15.58 2.7597C15.375 2.23352 15.1017 1.78719 14.6567 1.34251C14.2116 0.897509 13.7666 0.624173 13.24 0.420004C12.73 0.222169 12.1483 0.0873344 11.2966 0.048334C10.4433 0.00950025 10.1716 0 7.99825 0H8.00075ZM7.28308 1.44168C7.49608 1.44135 7.73375 1.44168 8.00075 1.44168C10.1368 1.44168 10.3899 1.44935 11.2335 1.48768C12.0135 1.52335 12.4368 1.65368 12.7188 1.76319C13.0921 1.90819 13.3583 2.08152 13.6381 2.36152C13.9181 2.64153 14.0915 2.9082 14.2368 3.28153C14.3463 3.5632 14.4768 3.98654 14.5123 4.76655C14.5507 5.60989 14.559 5.86323 14.559 7.99825C14.559 10.1333 14.5507 10.3866 14.5123 11.2299C14.4767 12.01 14.3463 12.4333 14.2368 12.715C14.0918 13.0883 13.9181 13.3541 13.6381 13.634C13.3581 13.914 13.0923 14.0873 12.7188 14.2323C12.4371 14.3423 12.0135 14.4723 11.2335 14.508C10.3901 14.5463 10.1368 14.5547 8.00075 14.5547C5.86456 14.5547 5.61139 14.5463 4.76805 14.508C3.98804 14.472 3.5647 14.3416 3.28253 14.2321C2.9092 14.0871 2.64253 13.9138 2.36252 13.6338C2.08252 13.3538 1.90919 13.0878 1.76385 12.7143C1.65435 12.4326 1.52385 12.0093 1.48835 11.2293C1.45002 10.3859 1.44235 10.1326 1.44235 7.99625C1.44235 5.85989 1.45002 5.60789 1.48835 4.76455C1.52402 3.98454 1.65435 3.5612 1.76385 3.2792C1.90885 2.90586 2.08252 2.63919 2.36252 2.35919C2.64253 2.07919 2.9092 1.90585 3.28253 1.76052C3.56454 1.65052 3.98804 1.52052 4.76805 1.48468C5.50606 1.45135 5.79206 1.44135 7.28308 1.43968V1.44168ZM12.2711 2.77003C11.7411 2.77003 11.3111 3.19953 11.3111 3.72971C11.3111 4.25971 11.7411 4.68972 12.2711 4.68972C12.8011 4.68972 13.2311 4.25971 13.2311 3.72971C13.2311 3.1997 12.8011 2.7697 12.2711 2.7697V2.77003ZM8.00075 3.89171C5.73189 3.89171 3.89237 5.73123 3.89237 8.00008C3.89237 10.2689 5.73189 12.1076 8.00075 12.1076C10.2696 12.1076 12.1085 10.2689 12.1085 8.00008C12.1085 5.73123 10.2694 3.89171 8.00058 3.89171H8.00075ZM8.00075 5.33339C9.47343 5.33339 10.6674 6.52723 10.6674 8.00008C10.6674 9.47276 9.47343 10.6668 8.00075 10.6668C6.5279 10.6668 5.33406 9.47276 5.33406 8.00008C5.33406 6.52723 6.5279 5.33339 8.00075 5.33339Z" fill="currentColor"/>
-                        </svg>
-                    </a>
-                    <a href="https://www.facebook.com/tgi.academy" target="_blank" class="footer-main__social__item">
-                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M8.05115 1.99866C8.05684 1.99867 8.06298 1.99868 8.06955 1.9987L8.14035 1.99892C8.96214 2.00194 13.1273 2.03213 14.2503 2.33404C14.9387 2.51868 15.4808 3.06284 15.6648 3.75357C15.7661 4.13307 15.8367 4.63747 15.8859 5.15622L15.8954 5.26013C15.9032 5.34683 15.9103 5.43372 15.9169 5.52029L15.9246 5.62399C15.9904 6.5381 15.998 7.3935 15.9989 7.58065L15.999 7.6059C15.999 7.60797 15.999 7.61135 15.999 7.61135V7.62552C15.999 7.62552 15.999 7.6289 15.999 7.63097L15.9989 7.65621C15.998 7.85044 15.9898 8.76433 15.9169 9.71664L15.9087 9.82064L15.9 9.92476C15.8505 10.4973 15.7762 11.0659 15.6648 11.4833C15.4808 12.174 14.9387 12.7183 14.2503 12.9028C13.0898 13.2149 8.68109 13.2368 8.06955 13.2383L8.02246 13.2384C8.0186 13.2384 8.0152 13.2384 8.01228 13.2384L7.99307 13.2384C7.99307 13.2384 7.98866 13.2384 7.98573 13.2384L7.92846 13.2383C7.61941 13.2375 6.34057 13.2316 5.0013 13.1856L4.83007 13.1795C4.8015 13.1784 4.77292 13.1774 4.74434 13.1763L4.57291 13.1695L4.40188 13.1622C3.29238 13.1135 2.23452 13.0337 1.74789 12.9028C1.05947 12.7183 0.517371 12.174 0.333379 11.4833C0.221913 11.0659 0.147602 10.4973 0.0980616 9.92476L0.0893244 9.82064L0.0811165 9.71664C0.0109033 8.79896 0.000711116 7.91695 -0.000768403 7.68023L-0.000945201 7.64634C-0.000957608 7.64329 -0.000967947 7.64048 -0.000976562 7.63791V7.59895C-0.000967947 7.59639 -0.000957608 7.59358 -0.000945201 7.59053L-0.000768403 7.55664C0.000571538 7.34226 0.00905783 6.59862 0.0628044 5.77854L0.0697612 5.67567C0.0709608 5.65847 0.0721808 5.64124 0.0734215 5.62399L0.0811165 5.52029C0.0877404 5.43372 0.0948985 5.34683 0.102634 5.26013L0.112196 5.15622C0.16142 4.63747 0.232046 4.13307 0.333379 3.75357C0.517371 3.06284 1.05947 2.51868 1.74789 2.33404C2.23452 2.20321 3.29238 2.12341 4.40188 2.07473L4.57291 2.06748L4.74434 2.06071C4.77292 2.05962 4.8015 2.05855 4.83007 2.0575L5.0013 2.05141C6.25508 2.00837 7.45591 2.0004 7.85767 1.99892L7.92846 1.9987C7.93504 1.99868 7.94117 1.99867 7.94686 1.99866H8.05115ZM6.39905 5.20985V10.027L10.5558 7.61857L6.39905 5.20985Z" fill="currentColor"/>
-                        </svg>
-                    </a>
-                    <a href="https://www.facebook.com/tgi.academy" target="_blank" class="footer-main__social__item">
-                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M0.0495854 3.55544C0.25173 2.66484 1.04822 2 2 2H14C14.9518 2 15.7483 2.66484 15.9504 3.55544L8 8.41403L0.0495854 3.55544ZM0 4.69708V11.8006L5.80319 8.24348L0 4.69708ZM6.7614 8.82905L0.191871 12.8559C0.512604 13.5323 1.20168 14 2 14H14C14.7983 14 15.4874 13.5323 15.8081 12.8559L9.2386 8.82905L8 9.58597L6.7614 8.82905ZM10.1968 8.24348L16 11.8006V4.69708L10.1968 8.24348Z" fill="currentColor"/>
-                        </svg>
-                    </a>
-                </div>
+            <p class="text-sm mb-4 mb-lg-0 flex-shrink-1">
+                Ліцензія на провадження освітньої діяльності закладу освіти № 659 від 22.09.2022 <br>
+                <a href="https://drive.google.com/drive/u/0/folders/15WvncggUFTtRcPvKx0xXSTb_zdXUoYwB" target="_blank">Прозорість
+                    та інформаційна відкритість (документи)</a>
+            </p>
+            <p class="mb-4 mb-lg-0 flex-shrink-0"> © <span id="curren-year"></span> TGI Academy</p>
+            <div class="footer-main__social">
+                <a href="https://www.facebook.com/tgi.academy" target="_blank" class="footer-main__social__item">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M16 8.0486C16 3.60314 12.418 -0.000610352 7.99949 -0.000610352C3.58095 -0.000610352 -0.000976562 3.60314 -0.000976562 8.0486C-0.000976562 12.0662 2.92468 15.3962 6.74942 16V10.3753H4.71805V8.0486H6.74942V6.27526C6.74942 4.25792 7.94383 3.14361 9.77132 3.14361C10.6466 3.14361 11.5622 3.30082 11.5622 3.30082V5.28168H10.5534C9.55951 5.28168 9.24957 5.90215 9.24957 6.53869V8.0486H11.4684L11.1137 10.3753H9.24957V16C13.0743 15.3962 16 12.0662 16 8.0486Z"
+                              fill="currentColor"/>
+                    </svg>
+                </a>
+                <a href="https://www.facebook.com/tgi.academy" target="_blank" class="footer-main__social__item">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8.00075 0C5.82806 0 5.55539 0.00950025 4.70205 0.048334C3.85037 0.0873344 3.26903 0.222169 2.76036 0.420004C2.23419 0.62434 1.78785 0.897676 1.34318 1.34251C0.898176 1.78719 0.62484 2.23352 0.419838 2.75953C0.221502 3.26837 0.0865008 3.84987 0.0481671 4.70122C0.01 5.55456 0 5.82739 0 8.00008C0 10.1728 0.00966692 10.4446 0.048334 11.298C0.0875011 12.1496 0.222336 12.731 0.420004 13.2396C0.624507 13.7658 0.897843 14.2121 1.34268 14.6568C1.78719 15.1018 2.23352 15.3758 2.75936 15.5802C3.26837 15.778 3.84987 15.9128 4.70138 15.9518C5.55472 15.9907 5.82723 16.0002 7.99975 16.0002C10.1726 16.0002 10.4444 15.9907 11.2978 15.9518C12.1495 15.9128 12.7315 15.778 13.2405 15.5802C13.7665 15.3758 14.2121 15.1018 14.6567 14.6568C15.1017 14.2121 15.375 13.7658 15.58 13.2398C15.7767 12.731 15.9117 12.1495 15.9517 11.2981C15.99 10.4448 16 10.1728 16 8.00008C16 5.82739 15.99 5.55472 15.9517 4.70138C15.9117 3.84971 15.7767 3.26837 15.58 2.7597C15.375 2.23352 15.1017 1.78719 14.6567 1.34251C14.2116 0.897509 13.7666 0.624173 13.24 0.420004C12.73 0.222169 12.1483 0.0873344 11.2966 0.048334C10.4433 0.00950025 10.1716 0 7.99825 0H8.00075ZM7.28308 1.44168C7.49608 1.44135 7.73375 1.44168 8.00075 1.44168C10.1368 1.44168 10.3899 1.44935 11.2335 1.48768C12.0135 1.52335 12.4368 1.65368 12.7188 1.76319C13.0921 1.90819 13.3583 2.08152 13.6381 2.36152C13.9181 2.64153 14.0915 2.9082 14.2368 3.28153C14.3463 3.5632 14.4768 3.98654 14.5123 4.76655C14.5507 5.60989 14.559 5.86323 14.559 7.99825C14.559 10.1333 14.5507 10.3866 14.5123 11.2299C14.4767 12.01 14.3463 12.4333 14.2368 12.715C14.0918 13.0883 13.9181 13.3541 13.6381 13.634C13.3581 13.914 13.0923 14.0873 12.7188 14.2323C12.4371 14.3423 12.0135 14.4723 11.2335 14.508C10.3901 14.5463 10.1368 14.5547 8.00075 14.5547C5.86456 14.5547 5.61139 14.5463 4.76805 14.508C3.98804 14.472 3.5647 14.3416 3.28253 14.2321C2.9092 14.0871 2.64253 13.9138 2.36252 13.6338C2.08252 13.3538 1.90919 13.0878 1.76385 12.7143C1.65435 12.4326 1.52385 12.0093 1.48835 11.2293C1.45002 10.3859 1.44235 10.1326 1.44235 7.99625C1.44235 5.85989 1.45002 5.60789 1.48835 4.76455C1.52402 3.98454 1.65435 3.5612 1.76385 3.2792C1.90885 2.90586 2.08252 2.63919 2.36252 2.35919C2.64253 2.07919 2.9092 1.90585 3.28253 1.76052C3.56454 1.65052 3.98804 1.52052 4.76805 1.48468C5.50606 1.45135 5.79206 1.44135 7.28308 1.43968V1.44168ZM12.2711 2.77003C11.7411 2.77003 11.3111 3.19953 11.3111 3.72971C11.3111 4.25971 11.7411 4.68972 12.2711 4.68972C12.8011 4.68972 13.2311 4.25971 13.2311 3.72971C13.2311 3.1997 12.8011 2.7697 12.2711 2.7697V2.77003ZM8.00075 3.89171C5.73189 3.89171 3.89237 5.73123 3.89237 8.00008C3.89237 10.2689 5.73189 12.1076 8.00075 12.1076C10.2696 12.1076 12.1085 10.2689 12.1085 8.00008C12.1085 5.73123 10.2694 3.89171 8.00058 3.89171H8.00075ZM8.00075 5.33339C9.47343 5.33339 10.6674 6.52723 10.6674 8.00008C10.6674 9.47276 9.47343 10.6668 8.00075 10.6668C6.5279 10.6668 5.33406 9.47276 5.33406 8.00008C5.33406 6.52723 6.5279 5.33339 8.00075 5.33339Z"
+                              fill="currentColor"/>
+                    </svg>
+                </a>
+                <a href="https://www.facebook.com/tgi.academy" target="_blank" class="footer-main__social__item">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8.05115 1.99866C8.05684 1.99867 8.06298 1.99868 8.06955 1.9987L8.14035 1.99892C8.96214 2.00194 13.1273 2.03213 14.2503 2.33404C14.9387 2.51868 15.4808 3.06284 15.6648 3.75357C15.7661 4.13307 15.8367 4.63747 15.8859 5.15622L15.8954 5.26013C15.9032 5.34683 15.9103 5.43372 15.9169 5.52029L15.9246 5.62399C15.9904 6.5381 15.998 7.3935 15.9989 7.58065L15.999 7.6059C15.999 7.60797 15.999 7.61135 15.999 7.61135V7.62552C15.999 7.62552 15.999 7.6289 15.999 7.63097L15.9989 7.65621C15.998 7.85044 15.9898 8.76433 15.9169 9.71664L15.9087 9.82064L15.9 9.92476C15.8505 10.4973 15.7762 11.0659 15.6648 11.4833C15.4808 12.174 14.9387 12.7183 14.2503 12.9028C13.0898 13.2149 8.68109 13.2368 8.06955 13.2383L8.02246 13.2384C8.0186 13.2384 8.0152 13.2384 8.01228 13.2384L7.99307 13.2384C7.99307 13.2384 7.98866 13.2384 7.98573 13.2384L7.92846 13.2383C7.61941 13.2375 6.34057 13.2316 5.0013 13.1856L4.83007 13.1795C4.8015 13.1784 4.77292 13.1774 4.74434 13.1763L4.57291 13.1695L4.40188 13.1622C3.29238 13.1135 2.23452 13.0337 1.74789 12.9028C1.05947 12.7183 0.517371 12.174 0.333379 11.4833C0.221913 11.0659 0.147602 10.4973 0.0980616 9.92476L0.0893244 9.82064L0.0811165 9.71664C0.0109033 8.79896 0.000711116 7.91695 -0.000768403 7.68023L-0.000945201 7.64634C-0.000957608 7.64329 -0.000967947 7.64048 -0.000976562 7.63791V7.59895C-0.000967947 7.59639 -0.000957608 7.59358 -0.000945201 7.59053L-0.000768403 7.55664C0.000571538 7.34226 0.00905783 6.59862 0.0628044 5.77854L0.0697612 5.67567C0.0709608 5.65847 0.0721808 5.64124 0.0734215 5.62399L0.0811165 5.52029C0.0877404 5.43372 0.0948985 5.34683 0.102634 5.26013L0.112196 5.15622C0.16142 4.63747 0.232046 4.13307 0.333379 3.75357C0.517371 3.06284 1.05947 2.51868 1.74789 2.33404C2.23452 2.20321 3.29238 2.12341 4.40188 2.07473L4.57291 2.06748L4.74434 2.06071C4.77292 2.05962 4.8015 2.05855 4.83007 2.0575L5.0013 2.05141C6.25508 2.00837 7.45591 2.0004 7.85767 1.99892L7.92846 1.9987C7.93504 1.99868 7.94117 1.99867 7.94686 1.99866H8.05115ZM6.39905 5.20985V10.027L10.5558 7.61857L6.39905 5.20985Z"
+                              fill="currentColor"/>
+                    </svg>
+                </a>
+                <a href="https://www.facebook.com/tgi.academy" target="_blank" class="footer-main__social__item">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0.0495854 3.55544C0.25173 2.66484 1.04822 2 2 2H14C14.9518 2 15.7483 2.66484 15.9504 3.55544L8 8.41403L0.0495854 3.55544ZM0 4.69708V11.8006L5.80319 8.24348L0 4.69708ZM6.7614 8.82905L0.191871 12.8559C0.512604 13.5323 1.20168 14 2 14H14C14.7983 14 15.4874 13.5323 15.8081 12.8559L9.2386 8.82905L8 9.58597L6.7614 8.82905ZM10.1968 8.24348L16 11.8006V4.69708L10.1968 8.24348Z"
+                              fill="currentColor"/>
+                    </svg>
+                </a>
+            </div>
         </div>
     </div>
 </footer>
+
+
+<div id="theModal" class="modal fade" aria-labelledby="theModalLabel" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+
+            </div>
+        </div>
+    </div>
+</div>
 
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
@@ -1381,10 +1477,13 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
         integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
         crossorigin="anonymous"></script>
+<script src="https://unpkg.com/infinite-scroll@4/dist/infinite-scroll.pkgd.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js"
+        integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous"
+        async></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
-<script src="assets/scripts/swiper.js"></script>
 <script src="assets/scripts/scroll-animation.js"></script>
 <script src="assets/scripts/counter.js"></script>
 <script src="assets/scripts/js.js"></script>

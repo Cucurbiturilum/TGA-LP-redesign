@@ -1,0 +1,9 @@
+@use '../abstracts/colours' as *;
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.masonry-gallery{
+    img{
+        border-radius: toRem(10);
+    }
+}

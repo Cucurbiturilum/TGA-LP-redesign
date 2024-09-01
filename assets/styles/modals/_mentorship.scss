@@ -1,0 +1,17 @@
+@use '../abstracts/colours' as *;
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.mentorship{
+  .h1{
+    margin-bottom: toRem(60);
+  }
+
+  &__container{
+    padding-top: toRem(48);
+
+    .h3{
+      margin-bottom: toRem(48);
+    }
+  }
+}

@@ -1,0 +1,157 @@
+@use '../abstracts/colours' as *;
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.projects {
+  display: flex;
+  flex-direction: column;
+  row-gap: toRem(48);
+
+  .effective {
+    background-color: $orange-10;
+  }
+
+  .research {
+    background-color: $green-secondary-10;
+  }
+
+  .mentorship {
+    background-color: $pink-primary-10;
+  }
+
+  &-type {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: toRem(24);
+
+    &__item {
+      border-radius: toRem(20);
+      padding: toRem(20);
+      display: flex;
+      flex-direction: column;
+      row-gap: toRem(24);
+
+      &.effective {
+        background-color: $orange-10;
+      }
+
+      &.research {
+        background-color: $green-secondary-10;
+      }
+
+      &.mentorship {
+        background-color: $pink-primary-10;
+      }
+
+      &-list {
+        padding-left: 1rem;
+        list-style-position: outside;
+
+        li {
+          padding-left: toRem(10);
+          font-weight: 300;
+          margin-bottom: toRem(12);
+
+          &::marker {
+            content: url("data:image/svg+xml,%3Csvg width='12' height='11' viewBox='0 0 12 11' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M0.5 5.28223C0.5 4.90253 0.807804 4.59473 1.1875 4.59473L9.15273 4.59473L6.20136 1.64336C5.93288 1.37488 5.93288 0.939575 6.20136 0.67109C6.46985 0.402604 6.90515 0.402604 7.17364 0.67109L11.2986 4.79609C11.5671 5.06457 11.5671 5.49988 11.2986 5.76836L7.17364 9.89336C6.90515 10.1618 6.46985 10.1618 6.20136 9.89336C5.93288 9.62488 5.93288 9.18957 6.20136 8.92109L9.15273 5.96973L1.1875 5.96973C0.807804 5.96973 0.5 5.66192 0.5 5.28223Z' fill='%23FEA726'/%3E%3C/svg%3E%0A");
+          }
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+
+  &-wrapper {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: toRem(24);
+  }
+
+  &__item {
+    overflow: hidden;
+    border-radius: toRem(20);
+    row-gap: toRem(24);
+    display: flex;
+    flex-direction: column;
+
+    &-images {
+      height: toRem(300);
+      position: relative;
+      width: 100% !important;
+
+      img {
+        object-fit: cover;
+        object-position: center;
+        height: 100%;
+      }
+    }
+
+    &-tag {
+      align-self: flex-start;
+      border-radius: toRem(4);
+      padding: toRem(6) toRem(10);
+      font-weight: 400;
+
+      &.effective {
+        background-color: $orange-30;
+      }
+
+      &.research {
+        background-color: $green-secondary-30;
+      }
+
+      &.mentorship {
+        background-color: $pink-primary-30;
+      }
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next {
+      width: toRem(32);
+      height: toRem(32);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      background: $green-primary url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M1 8C1 7.72386 1.22386 7.5 1.5 7.5L13.2929 7.5L10.1464 4.35355C9.95118 4.15829 9.95118 3.84171 10.1464 3.64645C10.3417 3.45118 10.6583 3.45118 10.8536 3.64645L14.8536 7.64645C15.0488 7.84171 15.0488 8.15829 14.8536 8.35355L10.8536 12.3536C10.6583 12.5488 10.3417 12.5488 10.1464 12.3536C9.95118 12.1583 9.95118 11.8417 10.1464 11.6464L13.2929 8.5H1.5C1.22386 8.5 1 8.27614 1 8Z' fill='white'/%3E%3C/svg%3E%0A") no-repeat center;
+      background-size: toRem(24);
+      position: absolute;
+      right: toRem(20);
+      bottom: toRem(20);
+      left: auto;
+      top: auto;
+
+      &:after {
+        display: none;
+      }
+    }
+
+    .swiper-button-prev {
+      transform: scale(-1);
+      right: toRem(64);
+    }
+  }
+
+  @include breakpoint(md) {
+    &-type {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    &-wrapper {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @include breakpoint(lg) {
+    &-type {
+      padding: toRem(40) 0;
+
+      &__item {
+        padding: toRem(30);
+      }
+    }
+  }
+}

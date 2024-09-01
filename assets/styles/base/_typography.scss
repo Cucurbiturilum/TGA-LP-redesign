@@ -53,3 +53,7 @@ body{
   font-size: clamp(1.125rem, 0.9886rem + 0.6818vw, 1.5rem); /* 24/18*/
   font-weight: 300;
 }
+
+.text-green{
+  color: $green-primary;
+}
