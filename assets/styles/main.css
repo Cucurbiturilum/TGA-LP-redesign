@@ -715,7 +715,7 @@ body {
 .footer-main__legal {
   padding-top: 6.25rem;
   margin-top: 6.25rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
   color: rgba(255, 255, 255, 0.75);
   font-weight: 300;
   column-gap: 2.25rem;
