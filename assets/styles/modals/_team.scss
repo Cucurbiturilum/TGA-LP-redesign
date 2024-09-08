@@ -17,6 +17,7 @@
     position: relative;
     overflow: hidden;
     border-radius: toRem(10);
+    min-height: 400px;
 
     &__front {
       height: 100%;
@@ -146,6 +147,10 @@
   @include breakpoint(lg) {
     &-wrapper {
       grid-template-columns: repeat(3, 1fr);
+
+      &-card{
+        min-height: auto;
+      }
     }
   }
 }

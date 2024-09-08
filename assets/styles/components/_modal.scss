@@ -11,12 +11,16 @@
 
   &-header{
     position: absolute;
-    top: toRem(10);
+    top: toRem(16);
     right: toRem(20);
     z-index: 99;
     cursor: pointer;
     padding: 0;
     border: none;
+  }
+
+  &-body{
+    padding: 0;
   }
 
   .btn-close{

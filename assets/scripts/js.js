@@ -8,7 +8,6 @@ function calculateHeight() {
 }
 
 function scrollToSection(selector) {
-    debugger
     const element = document.querySelector(selector);
 
     if (element) {
