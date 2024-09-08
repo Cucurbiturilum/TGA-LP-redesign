@@ -1997,7 +1997,7 @@ body {
 .educational-programs {
   display: flex;
   flex-direction: column;
-  row-gap: 3.75rem;
+  row-gap: 3rem;
 }
 .educational-programs .table {
   border-radius: 0.625rem;
@@ -2022,7 +2022,6 @@ body {
 .educational-programs__container {
   display: flex;
   flex-direction: column;
-  row-gap: 2.25rem;
 }
 .educational-programs .text-green {
   color: #02C700;
@@ -2093,7 +2092,7 @@ body {
 .job {
   display: flex;
   flex-direction: column;
-  row-gap: 2rem;
+  row-gap: 3rem;
 }
 .job__grid {
   display: flex;
@@ -2259,16 +2258,13 @@ body {
     max-width: 100%;
   }
   .mission-goals {
-    gap: 2.25rem;
+    gap: 1.5rem;
   }
   .mission-goals__item {
     padding: 1.875rem !important;
   }
 }
 
-.mentorship .h1 {
-  margin-bottom: 3.75rem;
-}
 .mentorship__container {
   padding-top: 3rem;
 }
@@ -2396,9 +2392,6 @@ body {
   }
 }
 @media only screen and (min-width: 992px) {
-  .projects-type {
-    padding: 2.5rem 0;
-  }
   .projects-type__item {
     padding: 1.875rem;
   }
@@ -2561,7 +2554,7 @@ body {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: auto;
-    gap: 2.25rem;
+    gap: 1.5rem;
   }
   .vision-grid__item {
     border-radius: 20px;

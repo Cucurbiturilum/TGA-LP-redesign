@@ -3,10 +3,6 @@
 @use '../abstracts/mixins' as *;
 
 .mentorship{
-  .h1{
-    margin-bottom: toRem(60);
-  }
-
   &__container{
     padding-top: toRem(48);
 

@@ -5,7 +5,7 @@
 .educational-programs {
   display: flex;
   flex-direction: column;
-  row-gap: toRem(60);
+  row-gap: toRem(48);
 
   .table {
     border-radius: toRem(10);
@@ -39,7 +39,6 @@
   &__container {
     display: flex;
     flex-direction: column;
-    row-gap: toRem(36);
   }
 
   .text-green {

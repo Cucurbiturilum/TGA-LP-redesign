@@ -147,8 +147,6 @@
 
   @include breakpoint(lg) {
     &-type {
-      padding: toRem(40) 0;
-
       &__item {
         padding: toRem(30);
       }
